@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+Unit Project (JavaScript/React) Requirements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Presentations on March 26*
 
-## Available Scripts
+Your job is to create a React app that utilizes a public API. You can find public APIs from a quick Google search. For reference, here is a repo that contains a ton of free APIs free of use: https://github.com/public-apis/public-apis
 
-In the project directory, you can run:
+Note: Make sure to integrate with APIs that don't require any authentication. You will learn more about authentication such as OAuth2 and Api Keys later in the year.
 
-### `npm start`
+We want you to integrate with APIs that have multiple HTTP methods. You may have seen/heard of us mention CRUD (Create, Read, Update, Delete). Create being a POST, Read being a GET, Update being a PUT, and Delete being a DELETE. If you want to learn more about different HTTP methods or learn more about them, here is a helpful link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The required methods we would like to see you use is an example of the following:
+Create a CRUD app that interacts with data with local json
+Have functionality on your app to pull all data, pull data by a specific entry, create json data, update json data, and remove json data
+If you want, you can still use a free api to pull and interact with actual data
+For example, you call a dealership api to pull all the cars on their lot. You then format that json in whatever structure you feel would be most efficient. Then, you create UI components to allow the user to add a new car which would append to that json data you stored locally from the api. Say there’s a component to view a specific car, you would query your local json data to grab the data for the specific car they clicked on and so forth.
+There should be a “components” folder in the “src” directory that contains a folder for each component then your actual jsx component in that (reference Logan’s pizza practice)
+*You must use React and be sure to style your web app to make it presentable*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To submit, send Logan, Briana, and Trey the link to your github repository. Be sure to deploy your app to GitHub pages.
 
-### `npm test`
+Helpful Tools:
+Postman
+ Postman is an application that allows the testing of web APIs. With Postman, you can call APIs to call them and interact with them before actually implementing the logic into your code.
+You can download the postman app or use the browser version (you will need to create an account)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
