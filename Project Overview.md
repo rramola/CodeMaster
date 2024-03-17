@@ -24,3 +24,24 @@ Responsiblities:
 Ryan - Create one starter quiz, Presentation,
 Kariel - Create one starter quiz(Javascript or HTML/CSS),
 Devin - Create one starter quiz, **Not any heavy CSS**
+
+
+
+
+
+
+
+
+
+
+
+
+
+Questions List:
+
+Python:
+- How do you define a function in Python? - def
+- How do you create a list in Python? - []
+- How do you comment a single line in Python? - #
+- How do you create a multi-line string in Python? - Triple-quotes
+- How do you convert an integer to a string in Python? - str()
