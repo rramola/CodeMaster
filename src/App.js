@@ -1,5 +1,5 @@
 
-function App() {
+function CodeMaster() {
   return (
     <div className="App">
       <p>Hello CoderMaster!</p>
@@ -7,4 +7,4 @@ function App() {
   );
 }
 
-export default App;
+export default CodeMaster;
