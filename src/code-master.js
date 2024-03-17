@@ -1,8 +1,15 @@
+import JsonHandler from "./components/import-json";
 
 function CodeMaster() {
   return (
     <div className="App">
-      <p>Hello CoderMaster!</p>
+      <div className="test-header">
+        <p>Hello CoderMaster!</p>
+      </div>
+
+      <div className="test-json">
+        <JsonHandler />
+      </div>
     </div>
   );
 }
