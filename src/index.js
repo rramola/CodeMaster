@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CodeMaster from './App';
+import CodeMaster from './CodeMaster';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
