@@ -1,0 +1,26 @@
+[
+
+    {
+        "quiz": {
+            "id": "python",
+            "questions": {
+                "question-one": "How do you define a function in Python?",
+                "question-two": "How do you create a list in Python?",
+                "question-three": "How do you comment a single line in Python?",
+                "question-four": "How do you convert an integer to a string in Python?",
+                "question-five": "How do you create a multi-line string in Python?"
+            },
+            "answers": {
+                "answer-one": "def",
+                "answer-two": "[]",
+                "answer-three": "#",
+                "answer-four": "str()",
+                "answer-five": "triple-quotes"
+            }
+        }
+    }
+        
+
+
+
+]
