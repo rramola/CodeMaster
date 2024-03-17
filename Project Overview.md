@@ -21,9 +21,9 @@ Additional features/ideads:
 
 
 Responsiblities:
-Ryan - Create one starter quiz, Presentation,
-Kariel - Create one starter quiz(Javascript or HTML/CSS),
-Devin - Create one starter quiz, **Not any heavy CSS**
+Ryan - Created one Python starter quiz, Presentation, Created JSON handler function,
+Kariel - Created HTML/CSS starter quiz,
+Devin - Create one starter quiz, **Not any heavy CSS**,
 
 
 

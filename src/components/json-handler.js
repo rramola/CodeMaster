@@ -14,8 +14,7 @@ export default function JsonHandler() {
         // THIS IS FOR TESTING PURPOSE FOR NOW
         <div>
             {data.map((quizzes) => (
-                <ul>
-                    
+                <ul> 
                     <p>Question: {quizzes.quiz.questions.questionOne}</p>
                     <p>Answer: {quizzes.quiz.answers.answerOne}</p>
                 </ul>

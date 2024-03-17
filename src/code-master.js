@@ -1,4 +1,4 @@
-import JsonHandler from "./components/import-json";
+import JsonHandler from "./components/json-handler";
 
 function CodeMaster() {
   return (
