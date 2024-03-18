@@ -17,6 +17,24 @@
                 "answerFive": "triple-quotes"
             }
         }
-    }
-        
+    },
+    {
+        "id": "html_css",
+        "quiz":{
+            "questions":{
+                "questionOne": "How do you create an unordered list in HTML?",
+                "questionTwo": "What CSS property is used to change the text color?",
+                "questionThree": "How do you add a border to an element in CSS?",
+                "questionFour": "What HTML tag is used to define a paragraph?",
+                "questionFive": "How do you italicize text in HTML?"  
+            },
+            "answers":{
+                "answerOne": "<ul>",
+                "answerTwo": "color",
+                "answerThree": "border",
+                "answer-Four": "<p>",
+                "answerFive": "<i>"
+            }
+        }
+    }    
 ]
