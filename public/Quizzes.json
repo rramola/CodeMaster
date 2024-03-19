@@ -19,8 +19,8 @@
         }
     },
     {
-        "id": "html_css",
-        "quiz":{
+        "quiz": {
+            "id": "html_css",
             "questions":{
                 "questionOne": "How do you create an unordered list in HTML?",
                 "questionTwo": "What CSS property is used to change the text color?",
@@ -35,6 +35,6 @@
                 "answer-Four": "<p>",
                 "answerFive": "<i>"
             }
-        }
+        }  
     }    
 ]

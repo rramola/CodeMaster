@@ -1,12 +1,11 @@
-import React, {useState, useEffect} from 'react',
+import React from 'react';
 
 //Started making a component that would get the ID to only pull a single quiz
-export default function QuizID({id}){
-    const [quiz, setQuiz] = useState(null);
-
-    useEffect(() => {
-    fetch("quizzes.json")
-    .then(response => response.json())
-    .then(data)   
-    })
+export default function QuizID({handleButtonClick}){
+    return (
+        <div>
+            <button onClick={() => handleButtonClick('python')}>Python</button>
+            <button onClick={() => handleButtonClick('html_css')}>HTML/CSS</button>
+        </div>
+    )
 }

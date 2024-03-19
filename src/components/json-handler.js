@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 
-export default function JsonHandler() {
+export default function JsonHandler({quizId}) {
+    console.log({quizId})
     const [data, setData] = useState([]);
     
     useEffect(() => {
