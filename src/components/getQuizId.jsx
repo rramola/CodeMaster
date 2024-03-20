@@ -22,16 +22,16 @@ export default function QuizID({handleButtonClick}){
                 <select id="categorySelector" className="quizDropdown">
                         {idList.map(item => <option value = {item} >{item}</option>)}
                 </select>
-                <select id="quizSelector" className="quizDropdown">
+                <select id="questionSelector" className="quizDropdown">
     
                     {/************PSUEDO CODE*************
                      
                      One possible solution
 
-                     query selector to grab the categorySelector value 
-                     using variable of query selector to grab questions from data of selected quiz
+                     query selector to grab the categorySelector id value 
+                     use variable of query selector to grab questions from data of selected quiz
 
-                     ***this may need to have a separate function that runs a for loop on the quiz id
+                     ***this may need to have a separate function that runs a for loop on the quiz id's
                     and if the id matches the category value***
                         ***then it does this***
 
