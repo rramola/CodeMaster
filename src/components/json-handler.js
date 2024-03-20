@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 
 export default function JsonHandler({quizId}) {
-    console.log({quizId})
     const [data, setData] = useState([]);
     
     useEffect(() => {
@@ -10,15 +9,14 @@ export default function JsonHandler({quizId}) {
         .then((res) => {setData(res)})
         .catch((err) => console.error(err))
     }, [])
+    let myCurrentObject = data[quizId];
+    // console.log(data[quizId])
 
     return (
         // THIS IS FOR TESTING PURPOSE FOR NOW
         <div>
             {data.map((quizzes) => (
-                <ul> 
-                    <p>Question: {quizzes.quiz.questions.questionOne}</p>
-                    <p>Answer: {quizzes.quiz.answers.answerOne}</p>
-                </ul>
+                    <p>Question: {Object.keys(myCurrentObject.questions)}</p>
             ))}
         </div>
     )

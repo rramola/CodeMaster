@@ -2,10 +2,15 @@ import React, {useEffect, useState} from 'react';
 
 //Started making a component that would get the ID to only pull a single quiz
 export default function QuizID({handleButtonClick}){
-
     const [data, setData] = useState([]);
-    let idList = [];
-
+    const [quizId, setQuizID] = useState ('');
+    const idList = [];
+    function handleSubmit(e){
+        const selectedQuiz = e.target.querySelector('#categorySelector').value;
+        setQuizID(selectedQuiz);
+        handleButtonClick(selectedQuiz);
+        e.preventDefault();
+    }
     useEffect(() => {
         fetch('quizzes.json')
         .then(response => response.json())
@@ -13,14 +18,14 @@ export default function QuizID({handleButtonClick}){
     }, [])
 
     for(let i = 0; i < data.length; i++){
-        idList.push(data[i].id)
+        idList.push(data[i].language)
     }  
 
     return (
         <div className="appContainer">
-            <form id="quizSelectorForm">
+            <form id="quizSelectorForm" onSubmit = {handleSubmit}>
                 <select id="categorySelector" className="quizDropdown">
-                        {idList.map(item => <option value = {item} >{item}</option>)}
+                        {idList.map(item => <option value = {idList.indexOf(item)}>{item}</option>)}
                 </select>
                 <select id="questionSelector" className="quizDropdown">
     
@@ -43,6 +48,8 @@ export default function QuizID({handleButtonClick}){
                 </select>
                 <button>Submit</button>
             </form>
+
+                    
         </div>
     )
 }
