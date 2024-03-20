@@ -25,11 +25,19 @@ export default function QuizID({handleButtonClick}){
                 <select id="quizSelector" className="quizDropdown">
     
                     {/************PSUEDO CODE*************
-        
-                    { for quiz in quizzes
-                        if quiz[id] == category 
-                            for questions in quiz[id];
-                            console.log(questions) */}
+                     
+                     One possible solution
+
+                     query selector to grab the categorySelector value 
+                     using variable of query selector to grab questions from data of selected quiz
+
+                     ***this may need to have a separate function that runs a for loop on the quiz id
+                    and if the id matches the category value***
+                        ***then it does this***
+
+                     map the questions into select options
+
+                    **************************************/}
 
                     <option value = "test">test</option>
                 </select>
