@@ -17,9 +17,12 @@ export default function QuizID({handleButtonClick}){
 
     return (
         <div>
-            <select>
-                {idList.map(item => <option value = {item}>{item}</option>)}
-            </select>
+            <form>
+                <select>
+                    {idList.map(item => <option value = {item}>{item}</option>)}
+                </select>
+                <button>Submit</button>
+            </form>
         </div>
     )
 }

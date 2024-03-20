@@ -1,59 +1,34 @@
 [
     {
-        "quiz": {
-            "id": "python",
-            "questions": {
-                "questionOne": "How do you define a function in Python?",
-                "questionTwo": "How do you create a list in Python?",
-                "questionThree": "How do you comment a single line in Python?",
-                "questionFour": "How do you convert an integer to a string in Python?",
-                "questionFive": "How do you create a multi-line string in Python?"
-            },
-            "answers": {
-                "answerOne": "def",
-                "answerTwo": "[]",
-                "answerThree": "#",
-                "answer-Four": "str()",
-                "answerFive": "triple-quotes"
-            }
-        }
-    },
-    {
-        "quiz": {
-            "id": "html_css",
-            "questions":{
-                "questionOne": "How do you create an unordered list in HTML?",
-                "questionTwo": "What CSS property is used to change the text color?",
-                "questionThree": "How do you add a border to an element in CSS?",
-                "questionFour": "What HTML tag is used to define a paragraph?",
-                "questionFive": "How do you italicize text in HTML?"  
-            },
-            "answers":{
-                "answerOne": "<ul>",
-                "answerTwo": "color",
-                "answerThree": "border",
-                "answer-Four": "<p>",
-                "answerFive": "<i>"
-            }
-        }  
-    },
-    {
-        "quiz": {
-            "id": "javascript",
-            "questions":{
-                "questionOne": "Which event occurs when a user clicks on an HTML element?",
-                "questionTwo": "How do you call a function named 'myFunction' in JavaScript?",
-                "questionThree": "Is JavaScript case-sensitive?",
-                "questionFour": "How do you write a message in an alert box?",
-                "questionFive": "Which operator is used to assign a value to a variable in JavaScript?"  
-            },
-            "answers":{
-                "answerOne": "onClick",
-                "answerTwo": "myFunction()",
-                "answerThree": "Yes",
-                "answer-Four": "alert()",
-                "answerFive": "="
-            }
-        }  
+        "id": 1,
+        "language": "python",
+        "questions": {
+                "How do you define a function in Python?": "def",
+                "How do you create a list in Python?": "[]",
+                "How do you comment a single line in Python?": "#",
+                "How do you convert an integer to a string in Python?": "str()",
+                "How do you create a multi-line string in Python?":  "triple-quotes"
     }
+},
+    {
+            "id": 2,
+            "questions": {
+                "How do you create an unordered list in HTML?": "<ul>",
+                "What CSS property is used to change the text color?": "color",
+                "How do you add a border to an element in CSS?": "border",
+                "What HTML tag is used to define a paragraph?": "<p>",
+                "How do you italicize text in HTML?": "<i>"
+            }
+    },
+    {
+            "id": 3,
+            "language": "javascript",
+            "questions": {
+                "Which event occurs when a user clicks on an HTML element?": "onClick",
+                "How do you call a function named 'myFunction' in JavaScript?": "myFunction()",
+                "Is JavaScript case-sensitive?": "Yes",
+                "How do you write a message in an alert box?": "alert()",
+                "Which operator is used to assign a value to a variable in JavaScript?": "="
+            }
+        }  
 ]
