@@ -41,3 +41,7 @@ code {
   width: 20%;
   align-content: center;
 }
+
+.hidden{
+  display:none;
+}

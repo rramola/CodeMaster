@@ -6,9 +6,11 @@ export default function QuizID({handleButtonClick}){
     const [quizId, setQuizID] = useState ('');
     const idList = [];
     function handleSubmit(e){
+        console.log(e.target);
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         setQuizID(selectedQuiz);
         handleButtonClick(selectedQuiz);
+        document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
     }
     useEffect(() => {
