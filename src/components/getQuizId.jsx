@@ -12,14 +12,17 @@ export default function QuizID({handleButtonClick}){
     }, [])
 
     for(let i = 0; i < data.length; i++){
-        idList.push(data[i].quiz.id)
+        idList.push(data[i].id)
     }
 
     return (
         <div>
-            <form>
-                <select>
+            <form id="quizSelectorForm">
+                <select id="categorySelector">
                     {idList.map(item => <option value = {item}>{item}</option>)}
+                </select>
+                <select id="quizSelector">
+                    <option value="placeholder">Placeholder</option>
                 </select>
                 <button>Submit</button>
             </form>
