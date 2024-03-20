@@ -10,16 +10,16 @@ export default function QuizID({handleButtonClick}){
         .then(response => response.json())
         .then(data => setData(data))
     }, [])
+
     for(let i = 0; i < data.length; i++){
-        console.log(data[i].quiz.id);
         idList.push(data[i].quiz.id)
     }
-    // console.log(data[0].quiz.hasOwnProperty('id'))
-    console.log(idList);
+
     return (
         <div>
-            <button onClick={() => handleButtonClick('python')}>Python</button>
-            <button onClick={() => handleButtonClick('html_css')}>HTML/CSS</button>
+            <select>
+                {idList.map(item => <option value = {item}>{item}</option>)}
+            </select>
         </div>
     )
 }
