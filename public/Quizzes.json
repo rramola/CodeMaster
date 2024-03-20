@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "language": "Python",
         "questions": {
                 "How do you define a function in Python?": "def",
@@ -11,7 +11,7 @@
     }
     },
     {
-        "id": 2,
+        "id": 1,
         "language": "HTML/CSS",
         "questions": {
             "How do you create an unordered list in HTML?": "<ul>",
@@ -22,7 +22,7 @@
             }
     },
     {
-        "id": 3,
+        "id": 2,
         "language": "JavaScript",
         "questions": {
             "Which event occurs when a user clicks on an HTML element?": "onClick",

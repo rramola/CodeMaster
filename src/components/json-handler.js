@@ -4,20 +4,24 @@ export default function JsonHandler({quizId}) {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        fetch("quizzes.json")
-        .then((res) => res.json())
-        .then((res) => {setData(res)})
+        fetch('quizzes.json')
+        .then(response => response.json())
+        .then(res => setData(res))
         .catch((err) => console.error(err))
     }, [])
-    let myCurrentObject = data[quizId];
-    // console.log(data[quizId])
 
+    // console.log(data)
+    let myCurrentObject = data[quizId];
+    // const questions = Object.keys(myCurrentObject.questions);
+    console.log(myCurrentObject);
+    // console.log(questions)
+    if (!myCurrentObject){
+        return (<div>Something went wrong...</div>)
+    }
     return (
         // THIS IS FOR TESTING PURPOSE FOR NOW
         <div>
-            {data.map((quizzes) => (
-                    <p>Question: {Object.keys(myCurrentObject.questions)}</p>
-            ))}
+            {Object.keys(myCurrentObject.questions).map(each => <p>Question: {each}</p>)}
         </div>
     )
 }
