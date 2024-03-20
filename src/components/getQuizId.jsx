@@ -19,16 +19,16 @@ export default function QuizID({handleButtonClick}){
     return (
         <div className="appContainer">
             <form id="quizSelectorForm">
-                <select id="categorySelector" className="quizSelect">
+                <select id="categorySelector" className="quizDropdown">
                         {idList.map(item => <option value = {item} >{item}</option>)}
                 </select>
-                <select id="quizSelector" className="quizSelect">
+                <select id="quizSelector" className="quizDropdown">
     
                     {/************PSUEDO CODE*************
         
                     { for quiz in quizzes
                         if quiz[id] == category 
-                            for questions in quiz;
+                            for questions in quiz[id];
                             console.log(questions) */}
 
                     <option value = "test">test</option>

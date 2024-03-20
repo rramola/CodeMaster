@@ -35,7 +35,7 @@ code {
   row-gap: 2rem;
 }
 
-.quizSelect {
+.quizDropdown {
   display: flex;
   justify-content: center;
   width: 20%;
