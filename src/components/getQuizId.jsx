@@ -6,6 +6,7 @@ export default function QuizID({handleButtonClick}){
         <div>
             <button onClick={() => handleButtonClick('python')}>Python</button>
             <button onClick={() => handleButtonClick('html_css')}>HTML/CSS</button>
+            <button onClick={() => handleButtonClick('javascript')}>JavaScript</button>
         </div>
     )
 }

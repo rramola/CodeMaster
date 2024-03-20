@@ -36,5 +36,24 @@
                 "answerFive": "<i>"
             }
         }  
-    }    
+    },
+    {
+        "quiz": {
+            "id": "javascript",
+            "questions":{
+                "questionOne": "Which event occurs when a user clicks on an HTML element?",
+                "questionTwo": "How do you call a function named 'myFunction' in JavaScript?",
+                "questionThree": "Is JavaScript case-sensitive?",
+                "questionFour": "How do you write a message in an alert box?",
+                "questionFive": "Which operator is used to assign a value to a variable in JavaScript?"  
+            },
+            "answers":{
+                "answerOne": "onClick",
+                "answerTwo": "myFunction()",
+                "answerThree": "Yes",
+                "answer-Four": "alert()",
+                "answerFive": "="
+            }
+        }  
+    }
 ]
