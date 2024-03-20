@@ -13,7 +13,7 @@ function CodeMaster() {
   
   return (
     <div className="App">
-      <div className="test-header">
+      <div className="header">
         <p>Hello CoderMaster!</p>
       </div>
       <div>

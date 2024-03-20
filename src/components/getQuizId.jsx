@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 //Started making a component that would get the ID to only pull a single quiz
 export default function QuizID({handleButtonClick}){
+
     const [data, setData] = useState([]);
     let idList = [];
 
@@ -13,16 +14,24 @@ export default function QuizID({handleButtonClick}){
 
     for(let i = 0; i < data.length; i++){
         idList.push(data[i].id)
-    }
+    }  
 
     return (
-        <div>
+        <div className="appContainer">
             <form id="quizSelectorForm">
-                <select id="categorySelector">
-                    {idList.map(item => <option value = {item}>{item}</option>)}
+                <select id="categorySelector" className="quizSelect">
+                        {idList.map(item => <option value = {item} >{item}</option>)}
                 </select>
-                <select id="quizSelector">
-                    <option value="placeholder">Placeholder</option>
+                <select id="quizSelector" className="quizSelect">
+    
+                    {/************PSUEDO CODE*************
+        
+                    { for quiz in quizzes
+                        if quiz[id] == category 
+                            for questions in quiz;
+                            console.log(questions) */}
+
+                    <option value = "test">test</option>
                 </select>
                 <button>Submit</button>
             </form>
