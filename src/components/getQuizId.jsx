@@ -5,14 +5,21 @@ export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
     const [quizId, setQuizID] = useState ('');
     const idList = [];
+
+
+
     function handleSubmit(e){
-        console.log(e.target);
+        // console.log(e.target);
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         setQuizID(selectedQuiz);
         handleButtonClick(selectedQuiz);
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
     }
+
+
+
+    
     useEffect(() => {
         fetch('quizzes.json')
         .then(response => response.json())
@@ -25,31 +32,18 @@ export default function QuizID({handleButtonClick}){
 
     return (
         <div className="appContainer">
-            <form id="quizSelectorForm" onSubmit = {handleSubmit}>
-                <select id="categorySelector" className="quizDropdown">
-                        {idList.map(item => <option value = {idList.indexOf(item)}>{item}</option>)}
-                </select>
-                <select id="questionSelector" className="quizDropdown">
+                <form className="selectorForm" onSubmit = {handleSubmit}>
+                    <select id="categorySelector" className="quizDropdown">
+                            {idList.map(item => <option value = {idList.indexOf(item)}>{item}</option>)}
+                    </select>
+                    <select id="questionSelector" className="quizDropdown">
     
-                    {/************PSUEDO CODE*************
-                     
-                     One possible solution
+                        <option value = "test">test</option>
+                        <option>Add new quiz</option>
 
-                     query selector to grab the categorySelector id value 
-                     use variable of query selector to grab questions from data of selected quiz
-
-                     ***this may need to have a separate function that runs a for loop on the quiz id's
-                    and if the id matches the category value***
-                        ***then it does this***
-
-                     map the questions into select options
-
-                    **************************************/}
-
-                    <option value = "test">test</option>
-                </select>
-                <button>Submit</button>
-            </form>
+                    </select>
+                    <button>Submit</button>
+                </form>
 
                     
         </div>

@@ -20,7 +20,7 @@ function CodeMaster() {
         <QuizID handleButtonClick={handleButtonClick}/>
       </div>
       {showJsonHandler &&
-        <div className="test-json">
+        <div className="appContainer">
           <JsonHandler quizId = {quizId}/>
         </div>
       }   
