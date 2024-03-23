@@ -3,6 +3,7 @@ import JsonHandler from "./components/json-handler";
 import {useState} from 'react';
 import EditQuiz from "./components/Updater/updateQuiz";
 
+
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
   const [showJsonHandler, setShowJson] = useState(false);
@@ -17,7 +18,6 @@ function CodeMaster() {
       <div className="header">
         <p>Hello CoderMaster!</p>
       </div>
-      <EditQuiz props={0}/>
       <div>
         <QuizID handleButtonClick={handleButtonClick}/>
       </div>
@@ -26,6 +26,7 @@ function CodeMaster() {
           <JsonHandler quizId = {quizId}/>
         </div>
       }
+      <EditQuiz props= {0}/>
     </div>
   );
 }
