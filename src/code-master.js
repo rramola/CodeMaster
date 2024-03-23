@@ -7,10 +7,25 @@ import EditQuiz from "./components/Updater/updateQuiz";
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
   const [showJsonHandler, setShowJson] = useState(false);
+  const [modifierId, setModifierId] = useState(null);
 
-  function handleButtonClick(id){
+  function handleButtonClick(id, modifier){
     setQuizId(id);
     setShowJson(true);
+    setModifierId(modifier)
+  }
+  
+  if (modifierId === "1") {
+    console.log("1")
+  }
+  if (modifierId === "2") {
+    console.log("2")
+  }
+  if (modifierId === "3") {
+    console.log("3")
+  }
+  if (modifierId === "4") {
+    console.log("4")
   }
 
   return (
@@ -24,11 +39,12 @@ function CodeMaster() {
       {showJsonHandler &&
         <div className="appContainer">
           <JsonHandler quizId = {quizId}/>
+          <EditQuiz quizId={quizId} />
         </div>
       }
-      <EditQuiz props= {0}/>
-    </div>
+    </div>   
   );
+  
 }
 
 export default CodeMaster;

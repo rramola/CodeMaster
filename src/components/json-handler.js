@@ -37,16 +37,4 @@ export default function JsonHandler({quizId}) {
 
     //TEMPLATE QUIZ EDITOR
 
-
-    return (
-        // THIS IS FOR TESTING PURPOSE FOR NOW
-        <div>
-            <div className="questionsContainer">
-                {Object.keys(myCurrentObject.questions).map(each => <p key={each}>Question: {each}</p>)}
-            </div>
-
-            {/*BUILDING OUT THE QUIZ EDITING HANDLER*/}
-        </div>
-        
-    )
 }

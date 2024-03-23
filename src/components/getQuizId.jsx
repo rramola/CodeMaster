@@ -13,21 +13,8 @@ export default function QuizID({handleButtonClick}){
         // console.log(e.target);
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         const modifierOption = e.target.querySelector('#questionSelector').value;
-
         setQuizID(selectedQuiz);
-        handleButtonClick(selectedQuiz);
-        if (modifierOption === "1"){
-            console.log("1")
-        }
-        if (modifierOption === "2"){
-            console.log("2")
-        }
-        if (modifierOption === "3"){
-            console.log("3")
-        }
-        if (modifierOption === "4"){
-            console.log("4")
-        }
+        handleButtonClick(selectedQuiz, modifierOption);
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
     }
