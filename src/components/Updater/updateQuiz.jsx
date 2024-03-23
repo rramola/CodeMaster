@@ -1,57 +1,47 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-export default function Updater() {
-      const [apiData, setApiData] = useState([]);
-      const [singleDataPiece, setSingleDataPiece] = useState({});
+export default function EditQuiz({props}){
+    const [singleQuiz, setSingleQuiz] = useState({});
+    const axiosGetOneItem = async(id) => {
+        await axios.get(`http://localhost:9000/getOne/${id}`)
+    .then((result) => {
+        setSingleQuiz(result.data)
+    });
+    }
+    const axiosUpdateItem = async(updateObject) => {
+        await axios.put(`http://localhost:9000/updateOne`, updateObject)
+      }
+
+      
+      for (let eachQuestion in singleQuiz.questions) {
+        if (eachQuestion === "How do you define a function in Python?") {
+            axiosUpdateItem( {
+                "id": 0,
+                "language": "Python",
+                "questions": {
+                 "How do you define a function in Python?": "def",
+                 "How do you create a list in Python?": "[]",
+                 "How do you comment a single line in Python?": "#",
+                 "How do you convert an integer to a string in Python?": "str()",
+                 "How do you create a multi-line string in Python?": "triple-quotes"
+                }
+               })
+        }
+      };
+
+    //   {Object.keys(currentQuizQuestions).map(question => <li>{question}</li>)}
 
 
-      const axiosGetAllData = async() => {
-            await axios.get('http://localhost:9000/api')
-            .then(res => {
-              const returnedApiData = res.data;
-              setApiData(returnedApiData);
-            })
-          }
+      useEffect(() => {
+        // console.log(props)
+        axiosGetOneItem(props);
+      }, []);
 
-          useEffect(() => {
-    axiosGetAllData();
-  }, []);
+    return (
+        <div>hello</div>
+        )
 
-  const questions = apiData[0].questions
-  questions.map((question) => <h1>{question}</h1>)
-  console.log(questions)
-  
+
 }
 
-
-
-
-//   const axiosGetOneItem = async(id) => {
-//         await axios.get(`http://localhost:9000/getOne/${id}`)
-//         .then((res) => setSingleDataPiece(res.data));
-//       }
-
-//       const axiosDeleteData = async(id) => {
-//             await axios.delete(`http://localhost:9000/deleteItem/${id}`);
-//           }
-
-//             const axiosUpdateItem = async(updateObject) => {
-//     await axios.put(`http://localhost:9000/updateOne`, updateObject)
-//   }
-
-//   return (
-//         <>
-//           <div>
-//             <ul>
-//               {apiData.map((each) => <li>{each.language}</li>)}
-//             </ul>
-//             <button onClick={() => axiosGetAllData()} >Render</button>
-//             <button onClick={() => axiosDeleteData(5)} >Delete</button>
-//             <button onClick={() => axiosGetOneItem(1)} >Single</button>
-//             <button onClick={() => axiosUpdateItem({"id": 2,"title": "YEET","year": 1994,"genre": "Drama","director": "Frank Darabont","cover": "ShawshankRedemption.jpg","actors": ["Tim Robbins","Morgan Freeman","Bob Gunton"]})} >Update</button>
-//           </div>
-//           <PostPage />
-//         </> 
-//       )
-//     }

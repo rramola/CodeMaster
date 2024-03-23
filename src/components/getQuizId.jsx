@@ -28,8 +28,7 @@ export default function QuizID({handleButtonClick}){
           setData(returnedApiData);
         })
       }
-      // ||   Should be used for the initial get all
-      // \/ upon loading the display screen.
+
       useEffect(() => {
         axiosGetAllData();
       }, []);
@@ -37,7 +36,7 @@ export default function QuizID({handleButtonClick}){
     for(let i = 0; i < data.length; i++){
         idList.push(data[i].language)
     }  
-    console.log(data)
+
     return (
         <div className="appContainer">
                 <form className="selectorForm" onSubmit = {handleSubmit}>
@@ -51,9 +50,7 @@ export default function QuizID({handleButtonClick}){
 
                     </select>
                     <button>Submit</button>
-                </form>
-
-                    
+                </form>               
         </div>
     )
 }
