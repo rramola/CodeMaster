@@ -12,8 +12,22 @@ export default function QuizID({handleButtonClick}){
     function handleSubmit(e){
         // console.log(e.target);
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
+        const modifierOption = e.target.querySelector('#questionSelector').value;
+
         setQuizID(selectedQuiz);
         handleButtonClick(selectedQuiz);
+        if (modifierOption === "1"){
+            console.log("1")
+        }
+        if (modifierOption === "2"){
+            console.log("2")
+        }
+        if (modifierOption === "3"){
+            console.log("3")
+        }
+        if (modifierOption === "4"){
+            console.log("4")
+        }
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
     }
@@ -44,10 +58,10 @@ export default function QuizID({handleButtonClick}){
                             {idList.map(item => <option key={item} value = {idList.indexOf(item)}>{item}</option>)}
                     </select>
                     <select id="questionSelector" className="quizDropdown">
-    
-                        <option value = "test">test</option>
-                        <option>Add new quiz</option>
-
+                        <option value="1">View Quizzes</option>
+                        <option value="2">Create Quiz</option>
+                        <option value="3">Modify Quiz</option>
+                        <option value="4">Delete Quiz</option>
                     </select>
                     <button>Submit</button>
                 </form>               
