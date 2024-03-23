@@ -1,3 +1,5 @@
+import DetermineNumberofQuestions from "./components/DetermineNumberOfNewQuestions";
+import CreateNewQuiz from "./components/CreateNewQuiz";
 import QuizID from "./components/getQuizId";
 import JsonHandler from "./components/json-handler";
 import {useState} from 'react';
@@ -7,7 +9,11 @@ import EditQuiz from "./components/Updater/updateQuiz";
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
   const [showJsonHandler, setShowJson] = useState(false);
+<<<<<<< HEAD
   const [modifierId, setModifierId] = useState(null);
+=======
+  const [numofQuestions, setnumofQuestions] = useState();
+>>>>>>> 71ab8437932f09cc0010a2a79dd08eab174034db
 
   function handleButtonClick(id, modifier){
     setQuizId(id);
@@ -28,6 +34,17 @@ function CodeMaster() {
     console.log("4")
   }
 
+<<<<<<< HEAD
+  function setQuestionsNum(num){
+    setnumofQuestions(num)
+  }
+
+
+  return (
+    <div>
+      <DetermineNumberofQuestions prop = {setQuestionsNum}/>
+      <CreateNewQuiz prop ={numofQuestions}/>
+=======
   return (
     <div className="App">
       <div className="header">
@@ -42,7 +59,27 @@ function CodeMaster() {
           <EditQuiz quizId={quizId} />
         </div>
       }
+<<<<<<< HEAD
     </div>   
+=======
+      <EditQuiz props= {0}/>
+>>>>>>> 5a3821c9a3856e0968d38d6ac8d6b0431b5d4f05
+    </div>
+    // <div className="App">
+    //   <div className="header">
+    //     <p>Hello CoderMaster!</p>
+    //   </div>
+    //   <div>
+    //     <QuizID handleButtonClick={handleButtonClick}/>
+    //   </div>
+    //   {showJsonHandler &&
+    //     <div className="appContainer">
+    //       <JsonHandler quizId = {quizId}/>
+    //     </div>
+    //   }   
+    //   {/* <Updater /> */}
+    // </div>
+>>>>>>> 71ab8437932f09cc0010a2a79dd08eab174034db
   );
   
 }

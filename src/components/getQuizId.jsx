@@ -10,7 +10,6 @@ export default function QuizID({handleButtonClick}){
 
 
     function handleSubmit(e){
-        // console.log(e.target);
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         const modifierOption = e.target.querySelector('#questionSelector').value;
         setQuizID(selectedQuiz);
@@ -18,9 +17,6 @@ export default function QuizID({handleButtonClick}){
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
     }
-
-
-
     
     const axiosGetAllData = async() => {
         await axios.get('http://localhost:9000/api')
