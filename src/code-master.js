@@ -19,11 +19,11 @@ function CodeMaster() {
       </div>
       <EditQuiz props={0}/>
       <div>
-        {/* <QuizID handleButtonClick={handleButtonClick}/> */}
+        <QuizID handleButtonClick={handleButtonClick}/>
       </div>
       {showJsonHandler &&
         <div className="appContainer">
-          {/* <JsonHandler quizId = {quizId}/> */}
+          <JsonHandler quizId = {quizId}/>
         </div>
       }
     </div>

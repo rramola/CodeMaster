@@ -13,7 +13,7 @@ export default function EditQuiz({props}){
         await axios.put(`http://localhost:9000/updateOne`, updateObject)
       }
 
-      
+
       for (let eachQuestion in singleQuiz.questions) {
         if (eachQuestion === "How do you define a function in Python?") {
             axiosUpdateItem( {
@@ -30,7 +30,6 @@ export default function EditQuiz({props}){
         }
       };
 
-    //   {Object.keys(currentQuizQuestions).map(question => <li>{question}</li>)}
 
 
       useEffect(() => {
@@ -39,7 +38,7 @@ export default function EditQuiz({props}){
       }, []);
 
     return (
-        <div>hello</div>
+        <div></div>
         )
 
 
