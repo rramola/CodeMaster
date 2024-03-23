@@ -1,5 +1,6 @@
 import QuizID from "./components/getQuizId";
 import JsonHandler from "./components/json-handler";
+import Updater from "./components/Updater/updateQuiz"
 import {useState} from 'react';
 
 function CodeMaster() {
@@ -24,6 +25,7 @@ function CodeMaster() {
           <JsonHandler quizId = {quizId}/>
         </div>
       }   
+      {/* <Updater /> */}
     </div>
   );
 }

@@ -38,16 +38,6 @@ export default function JsonHandler({quizId}) {
     //TEMPLATE QUIZ EDITOR
 
 
-    function QuizEditor() {
-
-        //NOT WORKING YET
-        let optionId = document.querySelectorAll(".quizEditor").value;
-        return (
-            console.log(optionId)
-        )
-    }
-
-
     return (
         // THIS IS FOR TESTING PURPOSE FOR NOW
         <div>
@@ -56,19 +46,6 @@ export default function JsonHandler({quizId}) {
             </div>
 
             {/*BUILDING OUT THE QUIZ EDITING HANDLER*/}
-
-            <div className="appContainer">
-                <form className="selectorForm">
-                    <select id="quizEditor">
-                        <option value="1">Modify Question</option>
-                        <option value="2">add a question</option>
-                        <option value="3">delete a question</option>
-                        <option value="4">delete quiz</option>
-                    </select>
-                    <button type="button" id="quizEditorSubmit" onSubmit={QuizEditor}>submit</button>
-                </form>
-            </div>
-            <QuizEditor />
         </div>
         
     )
