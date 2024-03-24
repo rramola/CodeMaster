@@ -26,7 +26,6 @@ export default function EditQuiz({quizId}){
         "language": (singleQuiz.language),
         "questions": (questions)
         })
-      e.preventDefault();
     };
 
     useEffect(() => {
