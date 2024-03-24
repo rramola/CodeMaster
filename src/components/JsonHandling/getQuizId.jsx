@@ -4,15 +4,11 @@ import axios from 'axios';
 //Started making a component that would get the ID to only pull a single quiz
 export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
-    const idList = [];
-
-
 
     function handleSubmit(e){
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
-        console.log(e)
         const modifierOption = e.target.querySelector('#questionSelector').value;
-        handleButtonClick(selectedQuiz, modifierOption);
+        handleButtonClick(selectedQuiz);
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
     }
@@ -29,15 +25,11 @@ export default function QuizID({handleButtonClick}){
         axiosGetAllData();
       }, []);
 
-    for(let i = 0; i < data.length; i++){
-        idList.push(data[i].language)
-    }  
-
     return (
         <div className="appContainer">
                 <form className="selectorForm" onSubmit = {handleSubmit}>
                     <select id="categorySelector" className="quizDropdown">
-                            {idList.map(item => <option key={item} value = {idList.indexOf(item)} /*value = {item.id}*/>{item}</option>)}
+                        {data.map(item => <option key={item} value={item.id}>{item.language}</option>)}
                     </select>
                     <select id="questionSelector" className="quizDropdown">
                         <option value="1">View Quizzes</option>
