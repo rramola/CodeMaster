@@ -3,63 +3,47 @@ import axios from 'axios';
 import { queries } from '@testing-library/react';
 
 export default function EditQuiz({quizId}){
-    const questionsList = [];
     const [singleQuiz, setSingleQuiz] = useState({});
     const axiosGetOneItem = async(id) => {
-        await axios.get(`http://localhost:9000/getOne/${id}`)
-    .then((result) => {
-        setSingleQuiz(result.data)
-    });
+      await axios.get(`http://localhost:9000/getOne/${id}`)
+      .then((result) => {
+      setSingleQuiz(result.data)
+      });
     }
-    // const axiosUpdateItem = async(updateObject) => {
-    //     await axios.put(`http://localhost:9000/updateOne`, updateObject)
-    //   };
+    let questions = singleQuiz.questions;
+
+    const axiosUpdateItem = async(updateObject) => {
+        await axios.put(`http://localhost:9000/updateOne`, updateObject)
+      };
     
-    function handleSubmit(e){
-      const selectedQuestion = e.target.querySelector('#questionSelector').value;
-      document.querySelector('.modifierContainer').classList.add('hidden')
-      console.log(selectedQuestion)
+    function handleSubmiter(e){
+      const newQuestion = e.target.querySelector('#createQuestion').value;
+      const newAnswer =  e.target.querySelector('#createAnswer').value;
+      document.querySelector('.modifierContainer');
+      questions[newQuestion] = newAnswer;
+      axiosUpdateItem( {
+        "id": (singleQuiz.id),
+        "language": (singleQuiz.language),
+        "questions": (questions)
+        })
       e.preventDefault();
     };
-      // let myCurrentObject = data[quizId];
-      let questions = singleQuiz.questions
-      // for (let eachQuestion in singleQuiz.questions) {
-      //   if (eachQuestion === "How do you define a function in Python?") {
-      //       axiosUpdateItem( {
-      //           "id": 0,
-      //           "language": "Python",
-      //           "questions": {
-      //            "How do you define a function in Python?": "def",
-      //            "How do you create a list in Python?": "[]",
-      //            "How do you comment a single line in Python?": "#",
-      //            "How do you convert an integer to a string in Python?": "str()",
-      //            "How do you create a multi-line string in Python?": "triple-quotes"
-      //           }
-      //          })
-      //   }
-      // };
-      for(const item in questions){
-        questionsList.push(item)
-      };
 
-      useEffect(() => {
-        axiosGetOneItem(quizId);
-      }, []);
+    useEffect(() => {
+      axiosGetOneItem([quizId]);
+    }, []);
 
-    return (
-      <div className="modifierContainer">
-        <form className="selectorForm" onSubmit={handleSubmit}>
-            <select id="questionSelector" className="questionDropdown">
-              {questionsList.map(item => <option key={item} value = {questionsList.indexOf(item)}>{item}</option>)}
-            </select>
-            <select id="modifierSelector" className="questionDropdown">
-                <option value = "test">Modify question</option>
-            </select>
-            <button>Submit</button>
-        </form>               
-      </div> 
-        )
-
-
+  return (
+    <div className="modifierContainer">
+      <form className="selectorForm" onSubmit={handleSubmiter}>
+          <h1>Question creator</h1>
+          <textarea placeholder='Please type new question here' id="createQuestion">
+          </textarea>
+          <textarea placeholder='Please type answer here' id="createAnswer">
+          </textarea>
+          <button>Submit</button>
+      </form>               
+    </div> 
+  )
 }
 
