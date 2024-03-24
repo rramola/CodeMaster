@@ -1,5 +1,5 @@
-import DetermineNumberofQuestions from "./components/DetermineNumberOfNewQuestions";
-import CreateNewQuiz from "./components/CreateNewQuiz";
+import DetermineNumberofQuestions from "./components/CreateQuiz/DetermineNumberOfNewQuestions";
+import CreateNewQuiz from "./components/CreateQuiz/CreateNewQuiz";
 import QuizID from "./components/JsonHandling/getQuizId";
 import JsonHandler from "./components/JsonHandling/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
@@ -27,7 +27,7 @@ function CodeMaster() {
     <div className="App">
       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
       <CreateNewQuiz prop ={[numofQuestions, name]}/>
-      {/* <div className="header">
+      <div className="header">
         <p>Hello CoderMaster!</p>
       </div>
       <div>
@@ -39,7 +39,7 @@ function CodeMaster() {
           <EditQuiz quizId={quizId}/>
           <DeleteQuiz quizId={quizId}/>
         </div>
-      } */}
+      }
       
     </div>   
   );
