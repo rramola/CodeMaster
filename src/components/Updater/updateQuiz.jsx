@@ -3,7 +3,6 @@ import axios from 'axios';
 import { queries } from '@testing-library/react';
 
 export default function EditQuiz({quizId}){
-    let questionsList = []
     const [singleQuiz, setSingleQuiz] = useState({});
     const axiosGetOneItem = async(id) => {
       await axios.get(`http://localhost:9000/getOne/${id}`)

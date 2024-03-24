@@ -7,8 +7,9 @@ export default function CreateNewQuiz({ prop }) {
     let name = prop[1];
 
     function handleSubmit(e) {
-        e.preventDefault();
         const questionsObject = {};
+        document.querySelector('.submitFormContainer').style.display="none";
+        document.querySelector('.languageSelectorFormContainer').style.display="flex"
 
         for (let i = 1; i <= num; i ++) {
             const questionInput = `Question ${i}`;
@@ -38,7 +39,7 @@ export default function CreateNewQuiz({ prop }) {
 
     return (
         <div className='submitFormContainer'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='submitQuizForm'>
             {Array.from({ length: num }, (_, index) => {
                 return (
                     <div key={index}>

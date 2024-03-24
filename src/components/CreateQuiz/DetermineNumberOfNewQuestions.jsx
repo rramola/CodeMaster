@@ -10,7 +10,11 @@ export default function DetermineNumberofQuestions({prop},{create}){
         prop(num, language);
         document.querySelector('.languageSelectorFormContainer').style.display="none"
         document.querySelector('.newTestFormContainer').style.display="none";
-        document.querySelector(".submitFormContainer").style.display="block"
+        document.querySelector(".submitFormContainer").style.display="grid";
+        document.querySelector('.buttonContainer').style.display="flex";
+        document.querySelector('.divider').style.display="none";
+        
+
     }
     
     return (
