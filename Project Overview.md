@@ -26,6 +26,28 @@ Kariel - Created HTML/CSS starter quiz,
 Devin - Create one starter quiz, **Not any heavy CSS**,
 
 
+Updated Responsibilities:
+Ryan:
+Creating Python questions
+Json handler
+Creating the Quiz Question Modifier component
+Navigation/Routing/Debugging
+Some Styling
+Fixed/Updated Delete component
+
+Kariel:
+Creating HTML/CSS questions
+Json handler
+Creating GetQuizId component
+Creating the Quiz Creator component
+Navigation/Routing/Debugging
+
+Devin:
+Delete Component
+styling
+presentation
+
+
 
 
 

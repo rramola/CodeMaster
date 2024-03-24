@@ -25,8 +25,8 @@ export default function JsonHandler({quizId}) {
     return (
       <div>
         <h1>Questions:</h1>
-        {questions.map(each => <p>Question: {each}</p>)}
-    </div>
+          {questions.map(each => <p>Question: {each}</p>)}
+      </div>
     )
 
 }

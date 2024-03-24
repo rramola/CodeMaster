@@ -37,27 +37,31 @@ export default function CreateNewQuiz({ prop }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-        {Array.from({ length: num }, (_, index) => {
-            return (
-                <div key={index}>
-                    <label>{`Question ${index + 1}`}</label>
-                    <input 
-                    type="text"
-                    name = {`Question ${index + 1}`}
-                    placeholder = {`Question ${index + 1}`} 
-                    required />
+        <div className='submitFormContainer'>
+            <form onSubmit={handleSubmit}>
+            {Array.from({ length: num }, (_, index) => {
+                return (
+                    <div key={index}>
+                        <label>{`Question ${index + 1}`}</label>
+                        <input 
+                        type="text"
+                        name = {`Question ${index + 1}`}
+                        placeholder = {`Question ${index + 1}`} 
+                        required />
 
-                    <label>{`Answer ${index + 1}`}</label>
-                    <input 
-                    type="text" 
-                    name = {`Answer ${index + 1}`}
-                    placeholder={`Answer ${index + 1}`} 
-                    required />
-                </div>
-            );
-        })}
-        <button type='submit'>Submit Questions</button>
-    </form>
+                        <label>{`Answer ${index + 1}`}</label>
+                        <input 
+                        type="text" 
+                        name = {`Answer ${index + 1}`}
+                        placeholder={`Answer ${index + 1}`} 
+                        required />
+                    </div>
+                );
+            })}
+            <div className='buttonContainer'>
+                <button type='submit'>Submit Questions</button>
+            </div>
+        </form>
+    </div>
     );
 }
