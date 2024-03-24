@@ -4,12 +4,14 @@ import { queries } from '@testing-library/react';
 
 export default function EditQuiz({quizId}){
     const [singleQuiz, setSingleQuiz] = useState({});
+
     const axiosGetOneItem = async(id) => {
       await axios.get(`http://localhost:9000/getOne/${id}`)
       .then((result) => {
       setSingleQuiz(result.data)
       });
     }
+
     let questions = singleQuiz.questions;
 
     const axiosUpdateItem = async(updateObject) => {
@@ -19,13 +21,12 @@ export default function EditQuiz({quizId}){
     function handleSubmiter(e){
       const newQuestion = e.target.querySelector('#createQuestion').value;
       const newAnswer =  e.target.querySelector('#createAnswer').value;
-      document.querySelector('.modifierContainer');
       questions[newQuestion] = newAnswer;
       axiosUpdateItem( {
         "id": (singleQuiz.id),
         "language": (singleQuiz.language),
         "questions": (questions)
-        })
+        });  
     };
 
     useEffect(() => {
@@ -36,9 +37,9 @@ export default function EditQuiz({quizId}){
     <div className="modifierContainer">
       <form className="selectorForm" onSubmit={handleSubmiter}>
           <h1>Question creator</h1>
-          <textarea placeholder='Please type new question here' id="createQuestion">
+          <textarea placeholder='Please type new question here' id="createQuestion" required>
           </textarea>
-          <textarea placeholder='Please type answer here' id="createAnswer">
+          <textarea placeholder='Please type answer here' id="createAnswer" required>
           </textarea>
           <button>Submit</button>
       </form>               

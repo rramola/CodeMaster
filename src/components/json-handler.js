@@ -3,28 +3,31 @@ import axios from "axios"
 
 export default function JsonHandler({quizId}) {
     const [data, setData] = useState([]);
+    const[reloadQuiz, setReloadQuiz] = useState([])
+    const [singleQuiz, setSingleQuiz] = useState({});
+    let questions = []
 
-    const axiosGetAllData = async() => {
-      await axios.get('http://localhost:9000/api')
-      .then(res => {
-        const returnedApiData = res.data;
-        setData(returnedApiData);
-      })
+    const axiosGetOneItem = async(id) => {
+      await axios.get(`http://localhost:9000/getOne/${id}`)
+      .then((result) => {
+      setSingleQuiz(result.data)
+      });
     }
 
     useEffect(() => {
-      axiosGetAllData();
+      axiosGetOneItem([quizId]);
     }, []);
 
-    let myCurrentObject = data[quizId];
-    if (!myCurrentObject){
-        return (<div>Something went wrong...</div>)
+    let myCurrentObject = singleQuiz.questions;
+
+    for (const item in myCurrentObject) {
+      questions.push(item)
     }
 
     return (
       <div>
         <h1>Questions:</h1>
-        {Object.keys(myCurrentObject.questions).map(each => <p>Question: {each}</p>)}
+        {questions.map(each => <p>Question: {each}</p>)}
     </div>
     )
 
