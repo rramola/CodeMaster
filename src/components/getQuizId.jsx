@@ -38,7 +38,7 @@ export default function QuizID({handleButtonClick}){
         <div className="appContainer">
                 <form className="selectorForm" onSubmit = {handleSubmit}>
                     <select id="categorySelector" className="quizDropdown">
-                            {idList.map(item => <option key={item} value = {idList.indexOf(item)}>{item}</option>)}
+                            {idList.map(item => <option key={item} value = {item.id}>{item}</option>)}
                     </select>
                     <select id="questionSelector" className="quizDropdown">
                         <option value="1">View Quizzes</option>

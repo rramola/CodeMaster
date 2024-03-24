@@ -2,7 +2,7 @@ import DetermineNumberofQuestions from "./components/DetermineNumberOfNewQuestio
 import CreateNewQuiz from "./components/CreateNewQuiz";
 import QuizID from "./components/getQuizId";
 import JsonHandler from "./components/json-handler";
-import Updater from "./components/Updater/updateQuiz"
+import EditQuiz from "./components/Updater/updateQuiz"
 import {useState} from 'react';
 
 function CodeMaster() {
@@ -22,8 +22,8 @@ function CodeMaster() {
 
   return (
     <div className="App">
-      <DetermineNumberofQuestions prop = {setQuestionsNum}/>
-      <CreateNewQuiz prop ={numofQuestions}/>
+      {/* <DetermineNumberofQuestions prop = {setQuestionsNum}/>
+      <CreateNewQuiz prop ={numofQuestions}/> */}
       <div className="header">
         <p>Hello CoderMaster!</p>
       </div>

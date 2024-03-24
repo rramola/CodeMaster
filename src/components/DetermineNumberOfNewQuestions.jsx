@@ -7,25 +7,18 @@ export default function DetermineNumberofQuestions({prop}){
         e.preventDefault();
         let num = Number(document.querySelector('#number').value);
         prop(num);
-        // console.log(num);
+        document.querySelector('#NewTestForm').classList.add('hidden')
     }
 
-    // useEffect(()=>{
-        // const axiosPostData = (newObject) => {
-        //     axios.post(`http://localhost:9000/addItem`, newObject)
-        //     .then(response => {
-        //       console.log(response);
-        //     });
-        //   };
-    // })
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form id = 'NewTestForm' onSubmit={handleSubmit}>
+                
                 <input 
                 type = 'text' 
                 placeholder = 'Enter language name'
-                required></input>
+                required/>
 
                 <input 
                 id= 'number' 
@@ -33,30 +26,10 @@ export default function DetermineNumberofQuestions({prop}){
                 min = "0" 
                 max = "10" 
                 placeholder='Number of Questions'
-                required></input>
+                required/>
 
-                <input type = 'submit'></input>
+                <input type = 'submit'/>
             </form>
         </div>
     )
-    
-    // function getNumberofQuestions(e){;
-    //     // console.log(e.target);
-    //     let n = Number(document.querySelector('#SelectNumber').value);
-    //     document.querySelector('#numbersForm').classList.add('hidden')
-    //     // console.log(typeof n)
-    //     console.log(n);
-    //     e.preventDefault();
-
-    //     return(
-    //         <form id = 'numbersForm' onSubmit={handleSubmit}>
-    //             <div>
-    //                 <input id = "SelectNumber" type ='number' placeholder="Number of Questions"></input>
-    //                 <input type='submit'></input>
-    //             </div>
-    //         </form>
-    //     )
-    // }
-
-
 }
