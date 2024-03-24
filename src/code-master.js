@@ -4,6 +4,7 @@ import QuizID from "./components/getQuizId";
 import JsonHandler from "./components/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
 import {useState} from 'react';
+import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz";
 
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
@@ -34,6 +35,7 @@ function CodeMaster() {
         <div className="appContainer">
           <JsonHandler quizId = {quizId}/>
           <EditQuiz quizId={quizId}/>
+          <DeleteQuiz quizId={quizId}/>
         </div>
       }
       
