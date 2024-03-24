@@ -40,17 +40,15 @@ function CodeMaster() {
       </div>
       {/* VIEW */}
       <QuizID handleButtonClick={handleButtonClick}/>
-      
+      <h1 className="divider">OR</h1>
       {/* CREATE */}
       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
       <CreateNewQuiz prop ={[numofQuestions, name]}/>
     </div>
     {showJsonHandler &&
       <div className="appContainer">
-
         {/* Grab */}
         <JsonHandler quizId = {quizId}/>
-
         {/* EDIT */}
         <EditQuiz quizId={quizId}/> 
 

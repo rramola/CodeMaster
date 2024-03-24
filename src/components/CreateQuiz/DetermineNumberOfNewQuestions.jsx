@@ -1,18 +1,21 @@
 import React, {useEffect, useState} from 'react';
 
 
-export default function DetermineNumberofQuestions({prop}){
+export default function DetermineNumberofQuestions({prop},{create}){
+    
     function handleSubmit(e){
         e.preventDefault();
         let num = Number(document.querySelector('#number').value);
         let language = document.querySelector('#language').value;
         prop(num, language);
+        document.querySelector('.languageSelectorFormContainer').style.display="none"
         document.querySelector('.newTestFormContainer').style.display="none";
         document.querySelector(".submitFormContainer").style.display="block"
     }
     
     return (
         <div className='newTestFormContainer'>
+            <h1>Create A New Quiz</h1>
             <form className = 'newTestForm' onSubmit={handleSubmit}>
                 <div className='newTestFormQuestions'>
                     <input 

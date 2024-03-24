@@ -32,7 +32,7 @@ code {
 }
 
 .newTestFormContainer{
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -77,6 +77,17 @@ code {
   display: none;
 }
 
+.questionsContainer {
+  display: block;
+}
+
+.updateContainer {
+  display: block;
+}
+
+.deleteQuizContainer {
+  display: block;
+}
 /* .quizDropdown {
   display: flex;
   justify-content: center;

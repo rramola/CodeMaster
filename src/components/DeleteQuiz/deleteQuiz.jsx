@@ -11,7 +11,7 @@ export default function DeleteQuiz({quizId}){
   }
 
   return(
-    <div>
+    <div className='deleteQuizContainer'>
       <form onSubmit={handleSubmitter}>
         <h1>Delete Quiz</h1>
         <button>Submit</button>
