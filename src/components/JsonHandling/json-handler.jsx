@@ -2,8 +2,6 @@ import React, {useState, useEffect} from "react";
 import axios from "axios"
 
 export default function JsonHandler({quizId}) {
-    const [data, setData] = useState([]);
-    const[reloadQuiz, setReloadQuiz] = useState([])
     const [singleQuiz, setSingleQuiz] = useState({});
     let questions = []
 

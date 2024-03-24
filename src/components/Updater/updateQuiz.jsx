@@ -1,37 +1,36 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { queries } from '@testing-library/react';
 
-export default function EditQuiz({quizId}){
-    const [singleQuiz, setSingleQuiz] = useState({});
+export default function EditQuiz({quizId}) {
+  const [singleQuiz, setSingleQuiz] = useState({});
 
-    const axiosGetOneItem = async(id) => {
-      await axios.get(`http://localhost:9000/getOne/${id}`)
-      .then((result) => {
-      setSingleQuiz(result.data)
-      });
-    }
+  const axiosGetOneItem = async(id) => {
+    await axios.get(`http://localhost:9000/getOne/${id}`)
+    .then((result) => {
+    setSingleQuiz(result.data)
+    })
+  }
 
-    let questions = singleQuiz.questions;
-
-    const axiosUpdateItem = async(updateObject) => {
-        await axios.put(`http://localhost:9000/updateOne`, updateObject)
-      };
-    
-    function handleSubmiter(e){
-      const newQuestion = e.target.querySelector('#createQuestion').value;
-      const newAnswer =  e.target.querySelector('#createAnswer').value;
-      questions[newQuestion] = newAnswer;
-      axiosUpdateItem( {
-        "id": (singleQuiz.id),
-        "language": (singleQuiz.language),
-        "questions": (questions)
-        });  
+  let questions = singleQuiz.questions;
+  
+  const axiosUpdateItem = async(updateObject) => {
+      await axios.put(`http://localhost:9000/updateOne`, updateObject)
     };
+  
+  function handleSubmiter(e){
+    const newQuestion = e.target.querySelector('#createQuestion').value;
+    const newAnswer =  e.target.querySelector('#createAnswer').value;
+    questions[newQuestion] = newAnswer;
+    axiosUpdateItem( {
+      "id": (singleQuiz.id),
+      "language": (singleQuiz.language),
+      "questions": (questions)
+      });  
+  };
 
-    useEffect(() => {
-      axiosGetOneItem([quizId]);
-    }, []);
+  useEffect(() => {
+    axiosGetOneItem([quizId]);
+  }, []);
 
   return (
     <div className="modifierContainer">

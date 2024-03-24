@@ -4,12 +4,10 @@ import axios from 'axios';
 //Started making a component that would get the ID to only pull a single quiz
 export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
-    const [quizId, setQuizID] = useState ('');
 
     function handleSubmit(e){
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         const modifierOption = e.target.querySelector('#questionSelector').value;
-        setQuizID([selectedQuiz]);
         handleButtonClick(selectedQuiz);
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
