@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
+// need to make sure they can't add quizes of the same language
 export default function CreateNewQuiz({ prop }) {
     // console.log(prop)
     let num = prop[0];
