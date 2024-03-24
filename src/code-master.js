@@ -11,6 +11,7 @@ function CodeMaster() {
   const [showJsonHandler, setShowJson] = useState(false);
   const [modifierId, setModifierId] = useState(null);
   const [numofQuestions, setnumofQuestions] = useState();
+  const [name, setName] = useState('')
 
   function handleButtonClick(id, modifier){
     setQuizId(id);
@@ -18,8 +19,9 @@ function CodeMaster() {
     }
 
 
-  function setQuestionsNum(num){
-    setnumofQuestions(num)
+  function setQuestionsNum(num, name){
+    setnumofQuestions(num);
+    setName(name);
   }
 
   if (x === 3) {
@@ -28,9 +30,9 @@ function CodeMaster() {
 
   return (
     <div className="App">
-      {/* <DetermineNumberofQuestions prop = {setQuestionsNum}/>
-      <CreateNewQuiz prop ={numofQuestions}/> */}
-      <div className="header">
+      <DetermineNumberofQuestions prop = {setQuestionsNum}/>
+      <CreateNewQuiz prop ={[numofQuestions, name]}/>
+      {/* <div className="header">
         <p>Hello CoderMaster!</p>
       </div>
       <div>
@@ -42,7 +44,7 @@ function CodeMaster() {
           {/* <EditQuiz quizId={quizId}/> */}
           <DeleteQuiz quizId={quizId}/>
         </div>
-      }
+      } */}
       
     </div>   
   );

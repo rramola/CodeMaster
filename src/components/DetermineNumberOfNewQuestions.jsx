@@ -6,7 +6,8 @@ export default function DetermineNumberofQuestions({prop}){
     function handleSubmit(e){
         e.preventDefault();
         let num = Number(document.querySelector('#number').value);
-        prop(num);
+        let language = document.querySelector('#language').value;
+        prop(num, language);
         document.querySelector('#NewTestForm').classList.add('hidden')
     }
 
@@ -14,8 +15,9 @@ export default function DetermineNumberofQuestions({prop}){
     return (
         <div>
             <form id = 'NewTestForm' onSubmit={handleSubmit}>
-                
+
                 <input 
+                id = 'language' 
                 type = 'text' 
                 placeholder = 'Enter language name'
                 required/>
