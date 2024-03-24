@@ -30,7 +30,6 @@
    "How do you comment a single line in Python?": "#",
    "How do you convert an integer to a string in Python?": "str()",
    "How do you create a multi-line string in Python?": "triple-quotes",
-   "What is?": "Why"
   }
  }
 ]
