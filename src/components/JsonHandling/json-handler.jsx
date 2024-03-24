@@ -4,7 +4,6 @@ import axios from "axios"
 export default function JsonHandler({quizId}) {
     const [singleQuiz, setSingleQuiz] = useState({});
     let questions = []
-
     const axiosGetOneItem = async(id) => {
       await axios.get(`http://localhost:9000/getOne/${id}`)
       .then((result) => {
@@ -23,10 +22,10 @@ export default function JsonHandler({quizId}) {
     }
 
     return (
-      <div>
-        <h1>Questions:</h1>
-        {questions.map(each => <p>Question: {each}</p>)}
-    </div>
+      <div className="questionsContainer">
+        <h1>CurrentQuiz Questions:</h1>
+          {questions.map(each => <p>Question: {each}</p>)}
+      </div>
     )
 
 }

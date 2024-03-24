@@ -3,12 +3,14 @@ import axios from 'axios';
 
 export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
-
+    
     function handleSubmit(e){
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
-        const modifierOption = e.target.querySelector('#questionSelector').value;
         handleButtonClick(selectedQuiz);
-        document.querySelector('.appContainer').classList.add('hidden')
+        document.querySelector('.languageSelectorFormContainer').style.display="none";
+        document.querySelector('.newTestFormContainer').style.display="none";
+        document.querySelector('.divider').style.display="none";
+
         e.preventDefault();
     }
     
@@ -25,18 +27,13 @@ export default function QuizID({handleButtonClick}){
       }, []);
 
     return (
-        <div className="appContainer">
-            <form className="selectorForm" onSubmit = {handleSubmit}>
+        <div className="languageSelectorFormContainer">
+            <form className="languageSelectorForm" onSubmit = {handleSubmit}>
+                <h1>Select A Language To View Quiz</h1>
                 <select id="categorySelector" className="quizDropdown">
                     {data.map(item => <option key={item} value={item.id}>{item.language}</option>)}
                 </select>
-                <select id="questionSelector" className="quizDropdown">
-                    <option value="1">View Quizzes</option>
-                    <option value="2">Create Quiz</option>
-                    <option value="3">Modify Quiz</option>
-                    <option value="4">Delete Quiz</option>
-                </select>
-                <button>Submit</button>
+                    <button type='submit'>Submit</button>
             </form>               
         </div>
     )

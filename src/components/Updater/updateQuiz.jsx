@@ -3,6 +3,7 @@ import axios from 'axios';
 import { queries } from '@testing-library/react';
 
 export default function EditQuiz({quizId}){
+    let questionsList = []
     const [singleQuiz, setSingleQuiz] = useState({});
     const axiosGetOneItem = async(id) => {
       await axios.get(`http://localhost:9000/getOne/${id}`)
@@ -10,6 +11,7 @@ export default function EditQuiz({quizId}){
       setSingleQuiz(result.data)
       });
     }
+
     let questions = singleQuiz.questions;
 
     const axiosUpdateItem = async(updateObject) => {
@@ -32,8 +34,9 @@ export default function EditQuiz({quizId}){
       axiosGetOneItem([quizId]);
     }, []);
 
+
   return (
-    <div className="modifierContainer">
+    <div className="updateContainer">
       <form className="selectorForm" onSubmit={handleSubmiter}>
           <h1>Question creator</h1>
           <textarea placeholder='Please type new question here' id="createQuestion">
