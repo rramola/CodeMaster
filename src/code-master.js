@@ -2,39 +2,19 @@ import DetermineNumberofQuestions from "./components/DetermineNumberOfNewQuestio
 import CreateNewQuiz from "./components/CreateNewQuiz";
 import QuizID from "./components/getQuizId";
 import JsonHandler from "./components/json-handler";
+import Updater from "./components/Updater/updateQuiz"
 import {useState} from 'react';
-import EditQuiz from "./components/Updater/updateQuiz";
-
 
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
   const [showJsonHandler, setShowJson] = useState(false);
-<<<<<<< HEAD
-  const [modifierId, setModifierId] = useState(null);
-=======
   const [numofQuestions, setnumofQuestions] = useState();
->>>>>>> 71ab8437932f09cc0010a2a79dd08eab174034db
 
-  function handleButtonClick(id, modifier){
+  function handleButtonClick(id){
     setQuizId(id);
     setShowJson(true);
-    setModifierId(modifier)
-  }
-  
-  if (modifierId === "1") {
-    console.log("1")
-  }
-  if (modifierId === "2") {
-    console.log("2")
-  }
-  if (modifierId === "3") {
-    console.log("3")
-  }
-  if (modifierId === "4") {
-    console.log("4")
   }
 
-<<<<<<< HEAD
   function setQuestionsNum(num){
     setnumofQuestions(num)
   }
@@ -43,29 +23,10 @@ function CodeMaster() {
   return (
     <div>
       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
-      <CreateNewQuiz prop ={numofQuestions}/>
-=======
-  return (
-    <div className="App">
-      <div className="header">
-        <p>Hello CoderMaster!</p>
-      </div>
-      <div>
-        <QuizID handleButtonClick={handleButtonClick}/>
-      </div>
-      {showJsonHandler &&
-        <div className="appContainer">
-          <JsonHandler quizId = {quizId}/>
-          <EditQuiz quizId={quizId} />
-        </div>
-      }
-<<<<<<< HEAD
-    </div>   
-=======
-      <EditQuiz props= {0}/>
->>>>>>> 5a3821c9a3856e0968d38d6ac8d6b0431b5d4f05
+      <CreateNewQuiz prop = {numofQuestions}/>
     </div>
     // <div className="App">
+    
     //   <div className="header">
     //     <p>Hello CoderMaster!</p>
     //   </div>
@@ -79,9 +40,7 @@ function CodeMaster() {
     //   }   
     //   {/* <Updater /> */}
     // </div>
->>>>>>> 71ab8437932f09cc0010a2a79dd08eab174034db
   );
-  
 }
 
 export default CodeMaster;
@@ -95,8 +54,8 @@ export default CodeMaster;
 
 
 // const App = () => {
-  // const [apiData, setApiData] = useState([]);
-  // const [singleDataPiece, setSingleDataPiece] = useState({});
+//   const [apiData, setApiData] = useState([]);
+//   const [singleDataPiece, setSingleDataPiece] = useState({});
 
 //   // \/ GET ALL FUNCTIONS BELOW \/ \\
 //   // Gets it all and gives it to ya.
@@ -136,9 +95,9 @@ export default CodeMaster;
 //   // You should build up a new version of the object that you'd like to change
 //   // along with it's CORRECT ID, the same one it already has in the json file.
 //   // Feed that object in as the argument.
-  // const axiosUpdateItem = async(updateObject) => {
-  //   await axios.put(`http://localhost:9000/updateOne`, updateObject)
-  // }
+//   const axiosUpdateItem = async(updateObject) => {
+//     await axios.put(`http://localhost:9000/updateOne`, updateObject)
+//   }
 //   // /\ UPDATE FUNCTION ABOVE /\ \\
 
 
@@ -147,7 +106,7 @@ export default CodeMaster;
 //   // "How do you comment a single line in Python?": "#",
 //   // "How do you convert an integer to a string in Python?": "str()",
 //   // "How do you create a multi-line string in Python?":  "triple-quotes"}};
-  // {Object.keys(myCurrentObj.questions).map(each => <li>Question: {each}</li>)}
+//   // {Object.keys(myCurrentObj.questions).map(each => <li>Question: {each}</li>)}
 
 //   return (
 //     <>
@@ -158,7 +117,7 @@ export default CodeMaster;
 //         <button onClick={() => axiosGetAllData()} >Render</button>
 //         <button onClick={() => axiosDeleteData(5)} >Delete</button>
 //         <button onClick={() => axiosGetOneItem(1)} >Single</button>
-        // <button onClick={() => axiosUpdateItem({"id": 2,"title": "YEET","year": 1994,"genre": "Drama","director": "Frank Darabont","cover": "ShawshankRedemption.jpg","actors": ["Tim Robbins","Morgan Freeman","Bob Gunton"]})} >Update</button>
+//         <button onClick={() => axiosUpdateItem({"id": 2,"title": "YEET","year": 1994,"genre": "Drama","director": "Frank Darabont","cover": "ShawshankRedemption.jpg","actors": ["Tim Robbins","Morgan Freeman","Bob Gunton"]})} >Update</button>
 //       </div>
 //       {/* <PostPage /> */}
 //     </> 
