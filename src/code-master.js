@@ -1,5 +1,5 @@
-import DetermineNumberofQuestions from "./components/DetermineNumberOfNewQuestions";
-import CreateNewQuiz from "./components/CreateNewQuiz";
+import DetermineNumberofQuestions from "./components/Creator/DetermineNumberOfNewQuestions";
+import CreateNewQuiz from "./components/Creator/CreateNewQuiz";
 import QuizID from "./components/JsonHandling/getQuizId";
 import JsonHandler from "./components/JsonHandling/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
@@ -16,23 +16,18 @@ function CodeMaster() {
   function handleButtonClick(id, modifier){
     setQuizId(id);
     setShowJson(true);
-    }
-
+  }
 
   function setQuestionsNum(num, name){
     setnumofQuestions(num);
     setName(name);
   }
 
-  if (x === 3) {
-  console.log("yay")
-  }
-
   return (
     <div className="App">
       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
       <CreateNewQuiz prop ={[numofQuestions, name]}/>
-      {/* <div className="header">
+      <div className="header">
         <p>Hello CoderMaster!</p>
       </div>
       <div>
@@ -41,14 +36,14 @@ function CodeMaster() {
       {showJsonHandler &&
         <div className="appContainer">
           <JsonHandler quizId = {quizId}/>
-          {/* <EditQuiz quizId={quizId}/> */}
+           <EditQuiz quizId={quizId}/> 
           <DeleteQuiz quizId={quizId}/>
-        </div>
-      } */}
-      
-    </div>   
+      </div>
+      }
+    </div>
   );
 }
+
 export default CodeMaster;
 
 
