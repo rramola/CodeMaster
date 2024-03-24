@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
+
 export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
-
+    const [quizId, setQuizId] = useState(null);
+    const [showJsonHandler, setShowJson] = useState(false);
+    
     function handleSubmit(e){
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
-        const modifierOption = e.target.querySelector('#questionSelector').value;
         handleButtonClick(selectedQuiz);
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
@@ -30,12 +32,10 @@ export default function QuizID({handleButtonClick}){
                 <select id="categorySelector" className="quizDropdown">
                     {data.map(item => <option key={item} value={item.id}>{item.language}</option>)}
                 </select>
-                <select id="questionSelector" className="quizDropdown">
-                    <option value="1">View Quizzes</option>
-                    <option value="2">Create Quiz</option>
-                    <option value="3">Modify Quiz</option>
-                    <option value="4">Delete Quiz</option>
-                </select>
+                    {/* <button value="1">View Quizzes</button>
+                    <button value="2">Create Quiz</button>
+                    <button value="3">Modify Quiz</button>
+                    <button value="4">Delete Quiz</button> */}
                 <button>Submit</button>
             </form>               
         </div>
