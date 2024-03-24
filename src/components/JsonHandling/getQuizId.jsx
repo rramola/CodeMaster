@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-
+import EditQuiz from '../Updater/updateQuiz';
 //Started making a component that would get the ID to only pull a single quiz
 export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
@@ -8,7 +8,8 @@ export default function QuizID({handleButtonClick}){
     function handleSubmit(e){
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         const modifierOption = e.target.querySelector('#questionSelector').value;
-        handleButtonClick(selectedQuiz);
+        console.log(modifierOption)
+        handleButtonClick(selectedQuiz, modifierOption);
         document.querySelector('.appContainer').classList.add('hidden')
         e.preventDefault();
     }

@@ -11,13 +11,18 @@ function CodeMaster() {
   const [modifierId, setModifierId] = useState(null);
   const [numofQuestions, setnumofQuestions] = useState();
 
-  function handleButtonClick(id){
+  function handleButtonClick(id, modifier){
     setQuizId(id);
     setShowJson(true);
-  }
+    }
+
 
   function setQuestionsNum(num){
     setnumofQuestions(num)
+  }
+
+  if (x === 3) {
+  console.log("yay")
   }
 
   return (
@@ -33,14 +38,13 @@ function CodeMaster() {
       {showJsonHandler &&
         <div className="appContainer">
           <JsonHandler quizId = {quizId}/>
-          <EditQuiz quizId={quizId}/>
+          {/* <EditQuiz quizId={quizId}/> */}
         </div>
       }
       
     </div>   
   );
 }
-
 export default CodeMaster;
 
 
