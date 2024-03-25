@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 
 export default function DetermineNumberofQuestions({prop},{create}){
@@ -8,9 +8,9 @@ export default function DetermineNumberofQuestions({prop},{create}){
         let num = Number(document.querySelector('#number').value);
         let language = document.querySelector('#language').value;
         prop(num, language);
-        document.querySelector('.languageSelectorFormContainer').style.display="none"
+        document.querySelector('.languageSelectorFormContainer').style.display="none";
         document.querySelector('.newTestFormContainer').style.display="none";
-        document.querySelector(".submitFormContainer").style.display="block"
+        document.querySelector(".submitFormContainer").style.display="block";
     }
     
     return (

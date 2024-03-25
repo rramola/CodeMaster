@@ -1,129 +1,96 @@
-@import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong")
-
-
-body {
-  color: #26134B;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Audiowide", sans-serif;
-  background-color: #7B337D;
-  color: #ffd0f3;
-  width: 100%;
-  height: 75px;
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-}
-
-.appContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #C874B2;
-}
-
-.newTestFormContainer{
-  background-color: #ffe5fb;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 50vw;
-  border: solid black 3px;
-}
-
-.newTestForm {
-  display: grid;
-  grid-template-rows: 1fr 1fr; 
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  row-gap: 2rem;
-}
-.newTestFormQuestions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3rem;
-}
-
-.submitContainer {
-  display: flex;
-  justify-content: center;
+html {
+  height: 100%;
+  background: linear-gradient(#F9E0E4, #d9bcc1,#210535,#210535)
 }
 
 .languageSelectorForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 50vw;
-  border: solid black 3px;
+  padding: 4rem;
+  width: 450px;
+  margin: auto;
+  border: solid black 1px;
   row-gap: 2rem;
+  margin-top: 60px;
+  color: #210535;
 }
 
-
-.submitFormContainer{
-  display: none;
-}
-
-.questionsContainer {
-  display: block;
-}
-
-.updateContainer {
-  display: block;
-}
-
-.deleteQuizContainer {
-  display: block;
-}
-
-select {
-  height: 50px;
+.languageSelectorForm select {
   width: 10rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: #f7e7ec;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 7px;
+}
+
+.languageSelectorForm select:focus {
+  background-color: #f3dde4;
+  border: black 2px;
+}
+
+
+.languageSelectorForm option {
+  width: 7rem;
+}
+
+.languageSelectorForm option:active {
+  width: 7rem;
+}
+
+.languageSelectorForm button {
+  width: 7rem;
+  height: 1.7rem;
+  background-color: #f7e7ec;
+  font-size: 17px;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 7px;
+}
+
+.newTestFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  width: 450px;
+  margin: auto;
+  border: solid black 1px;
+  row-gap: 2rem;
+  margin-top: 25px;
+  color: #210535;
+  background-color: #f3dde4;
+}
+
+.newTestFormContainer input {
+  display: flex;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: 12em;
+  height: 2rem;
+  cursor: pointer;
+  background-color: #f7e7ec;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 7px;
+}
+
+.newTestFormContainer button {
+  width: 7rem;
+  height: 1.7rem;
+  background-color: #f7e7ec;
+  font-size: 17px;
+  margin: auto;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  background-color: #F5D5E0;
-}
-
-button {
-  width: 10rem;
-  cursor: pointer;
-  background-color: whitesmoke;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-input {
-  width: 10rem;
-  cursor: pointer;
-  background-color: #F5D5E0;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 7px;
 }

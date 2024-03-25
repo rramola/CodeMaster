@@ -35,12 +35,11 @@ function CodeMaster() {
   // </Routes>
 
   return (
-    <div className="App">
+    <div>
       <div class="appContainer">
-        <Header/>
       {/* VIEW */}
       <QuizID handleButtonClick={handleButtonClick}/>
-      <h1 className="divider">OR</h1>
+      {/* <h1 className="divider">OR</h1> */}
       {/* CREATE */}
       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
       <CreateNewQuiz prop ={[numofQuestions, name]}/>
