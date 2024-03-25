@@ -20,49 +20,6 @@ Additional features/ideads:
 - Have a random quiz generated based on current available quizzes
 
 
-Responsiblities:
-Ryan:
-Created one Python starter quiz 
-Presentation
-Created JSON handler function
-
-Kariel:
-Created HTML/CSS starter quiz
-Create Quiz component
-Create GetQuizId component
-
-Devin:
-Create one starter quiz
-Create Delete component
-**Not any heavy CSS**,
-
-
-
-
-
-Updated Responsibilities:
-Ryan:
-Creating Python questions
-Json handler
-Creating the Quiz Question Modifier component
-Navigation/Routing/Debugging
-Some Styling
-Delete component
-
-Kariel:
-Creating HTML/CSS questions
-Json handler
-Creating GetQuizId component
-Creating the Quiz Creator component
-Navigation/Routing/Debugging
-Styling
-
-Devin:
-presentation
-
-
-
-
 
 Starter Questions List:
 [
