@@ -27,17 +27,16 @@ router.post('/addItem', (req, res) => {
 
   fs.readFile('genericApi.json', function(err, data) {
     let json = JSON.parse(data);
-    // let listId = []
-    // let m = 0;
-    // for(let i = 0; i < json.length; i++){
-    //   listId.push(json[i].id)
-    // }
-    // for(let i =0; i < listId.length; i++) {
-    //   if (listId[i] > m) {
-    //     m = listId[i]
-    //   }
-    // }
-    let nextId = json.length > 0 ? json[json.length - 1].id + 1: 1;
+    let nextId = 0;
+    if (json.length > 0) {
+      json.forEach(element => {
+        if (element.id > nextId) {
+          nextId = element.id + 1;
+        }
+      });
+    } else {
+      nextId = 0;
+    }
     let newObject = {id: nextId};
     for (let i = 0; i < keys.length; i++) {
       newObject[keys[i]] = req.body[keys[i]];

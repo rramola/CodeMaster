@@ -18,50 +18,19 @@ code {
   align-items: center;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-}
-
 .appContainer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   background-color: #fff;
 }
 
-.newTestFormContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 50vw;
-  border: solid black 3px;
-}
-
-.newTestForm {
-  display: grid;
-  grid-template-rows: 1fr 1fr; 
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  row-gap: 2rem;
-}
-.newTestFormQuestions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3rem;
-}
-
-.submitContainer {
+.modifierContainer {
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 
-.languageSelectorForm {
+.selectorForm {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,43 +41,18 @@ code {
   row-gap: 2rem;
 }
 
-
-.submitFormContainer{
-  display: none;
-  width: 50vw;
-  grid-template-columns: 1fr;
-  align-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border: solid black 3px;
-  row-gap: 2rem;
-}
-
-.submitQuizForm {
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 2rem;
-}
-.buttonContainer {
-  display: none;
   justify-content: center;
+  background-color: #fff;
 }
-.questionsContainer {
-  display: block;
-}
-
-.updateContainer {
-  display: block;
-}
-
-.deleteQuizContainer {
-  display: block;
-}
-/* .quizDropdown {
+.quizDropdown {
   display: flex;
   justify-content: center;
   width: 20%;
   align-content: center;
-} */
+}
 
+.hidden{
+  display:none;
+}
