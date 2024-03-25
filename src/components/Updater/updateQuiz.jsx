@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { queries } from '@testing-library/react';
 
 export default function EditQuiz({quizId}){
     const [singleQuiz, setSingleQuiz] = useState({});
@@ -20,7 +19,6 @@ export default function EditQuiz({quizId}){
     function handleSubmiter(e){
       const newQuestion = e.target.querySelector('#createQuestion').value;
       const newAnswer =  e.target.querySelector('#createAnswer').value;
-      document.querySelector('.modifierContainer');
       questions[newQuestion] = newAnswer;
       axiosUpdateItem( {
         "id": (singleQuiz.id),

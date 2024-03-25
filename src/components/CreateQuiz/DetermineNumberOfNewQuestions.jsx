@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 
-export default function DetermineNumberofQuestions({prop},{create}){
+export default function DetermineNumberofQuestions({prop}){
     
     function handleSubmit(e){
         e.preventDefault();

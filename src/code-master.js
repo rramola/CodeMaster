@@ -6,7 +6,6 @@ import EditQuiz from "./components/Updater/updateQuiz"
 import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
 import {useState} from 'react';
 
-
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
   const [showJsonHandler, setShowJson] = useState(false);
@@ -22,15 +21,6 @@ function CodeMaster() {
     setnumofQuestions(num);
     setName(name);
   }
-
-  // <Routes>
-  //   <Route path="/components/JsonHandling/getQuizId" element={<QuizID handleButtonClick={handleButtonClick} />} />
-  //   <Route path="./components/JsonHandling/json-handler" element={<JsonHandler quizId={quizId} />} />
-  //   <Route path="./components/Creator/DetermineNumberOfNewQuestions" element={<DetermineNumberofQuestions prop={setQuestionsNum} />} />
-  //   <Route path="./components/Creator/CreateNewQuiz" element={<CreateNewQuiz prop ={[numofQuestions, name]}/>} />
-  //   <Route path="./components/Updater/updateQuiz" element={<CreateNewQuiz prop ={[numofQuestions, name]}/>} />
-  //   <Route path="./components/DeleteQuiz/deleteQuiz" element={<DeleteQuiz quizId={quizId}/>} />
-  // </Routes>
 
   return (
     <div className="App">

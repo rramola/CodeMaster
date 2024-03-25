@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 
 export default function CreateNewQuiz({ prop }) {
-    // console.log(prop)
     let num = prop[0];
     let name = prop[1];
 
@@ -24,8 +23,6 @@ export default function CreateNewQuiz({ prop }) {
             language: name,
             questions: questionsObject
         };
-
-        console.log(newObject);
 
         const axiosPostData = (newObject) => {
             axios.post(`http://localhost:9000/addItem`, newObject)
