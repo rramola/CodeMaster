@@ -5,13 +5,13 @@ import axios from 'axios';
 // need to make sure they can't add quizes of the same language
 // creates id based on id of object before it. need a way to sort it to get the correct id
 export default function CreateNewQuiz({ prop }) {
-    // console.log(prop)
     let num = prop[0];
     let name = prop[1];
 
     function handleSubmit(e) {
-        e.preventDefault();
         const questionsObject = {};
+        document.querySelector('.submitFormContainer').style.display="none";
+        document.querySelector('.languageSelectorFormContainer').style.display="flex"
 
         for (let i = 1; i <= num; i ++) {
             const questionInput = `Question ${i}`;
@@ -39,7 +39,7 @@ export default function CreateNewQuiz({ prop }) {
 
     return (
         <div className='submitFormContainer'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='submitQuizForm'>
             {Array.from({ length: num }, (_, index) => {
                 return (
                     <div key={index}>

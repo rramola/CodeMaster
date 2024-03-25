@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import { queries } from '@testing-library/react';
 
 export default function EditQuiz({quizId}){
-    let questionsList = []
     const [singleQuiz, setSingleQuiz] = useState({});
     const axiosGetOneItem = async(id) => {
       await axios.get(`http://localhost:9000/getOne/${id}`)
@@ -21,7 +19,6 @@ export default function EditQuiz({quizId}){
     function handleSubmiter(e){
       const newQuestion = e.target.querySelector('#createQuestion').value;
       const newAnswer =  e.target.querySelector('#createAnswer').value;
-      document.querySelector('.modifierContainer');
       questions[newQuestion] = newAnswer;
       axiosUpdateItem( {
         "id": (singleQuiz.id),

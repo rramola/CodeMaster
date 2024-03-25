@@ -3,94 +3,125 @@ html {
   background: linear-gradient(#F9E0E4, #d9bcc1,#210535,#210535)
 }
 
-.languageSelectorForm {
-  display: flex;
+.header {
+  display: none;
   flex-direction: column;
   align-items: center;
-  padding: 4rem;
-  width: 450px;
-  margin: auto;
-  border: solid black 1px;
-  row-gap: 2rem;
-  margin-top: 60px;
-  color: #210535;
 }
 
-.languageSelectorForm select {
-  width: 10rem;
-  height: 2rem;
-  cursor: pointer;
-  background-color: #f7e7ec;
-  font-size: 18px;
-  font-weight: 500;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
+.App {
+  height: 100vh;
 }
-
-.languageSelectorForm select:focus {
-  background-color: #f3dde4;
-  border: black 2px;
-}
-
-
-.languageSelectorForm option {
-  width: 7rem;
-}
-
-.languageSelectorForm option:active {
-  width: 7rem;
-}
-
-.languageSelectorForm button {
-  width: 7rem;
-  height: 1.7rem;
-  background-color: #f7e7ec;
-  font-size: 17px;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
-}
-
-.newTestFormContainer {
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 4rem;
-  width: 450px;
-  margin: auto;
-  border: solid black 1px;
-  row-gap: 2rem;
-  margin-top: 25px;
-  color: #210535;
-  background-color: #f3dde4;
 }
 
-.newTestFormContainer input {
+.appContainer {
   display: flex;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  width: 12em;
-  height: 2rem;
-  cursor: pointer;
-  background-color: #f7e7ec;
-  font-size: 18px;
-  font-weight: 500;
-  border: none;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
-}
-
-.newTestFormContainer button {
-  width: 7rem;
-  height: 1.7rem;
-  background-color: #f7e7ec;
-  font-size: 17px;
-  margin: auto;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
+  height: 100%;
+  background-color: purple;
+}
+
+.newTestFormContainer{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 50vw;
+  border: solid black 3px;
+}
+
+.newTestForm {
+  display: flex;
+  grid-template-rows: 1fr 1fr; 
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  row-gap: 2rem;
+}
+.newTestFormQuestions {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.languageSelectorForm {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  width: 450px;
+  margin: auto;
+  border: solid black 1px;
+  row-gap: 2rem;
+}
+
+
+.submitFormContainer{
+  display: none;
+  width: 50vw;
+  grid-template-columns: 1fr;
+  align-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: solid black 3px;
+  row-gap: 2rem;
+}
+
+.submitQuizForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.questionsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateContainer {
+  display: flex;
+}
+
+.deleteQuizContainer {
+  display: flex;
+}
+
+.divider {
+  display: none;
+}
+.openingPage {
+  display: flex;
+  flex-direction: column;
+  animation: fade-in 3s;
+  align-items: center;
+}
+
+.loadingButton {
+  width: 50%;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }

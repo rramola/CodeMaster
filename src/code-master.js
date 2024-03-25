@@ -1,3 +1,4 @@
+import Opener from "./components/OpeningPage/Main";
 import DetermineNumberofQuestions from "./components/CreateQuiz/DetermineNumberOfNewQuestions";
 import CreateNewQuiz from "./components/CreateQuiz/CreateNewQuiz";
 import QuizID from "./components/JsonHandling/getQuizId";
@@ -7,7 +8,6 @@ import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
 import Header from './Styling/Header';
 import Footer from './Styling/Footer';
 import {useState} from 'react';
-
 
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
@@ -25,25 +25,21 @@ function CodeMaster() {
     setName(name);
   }
 
-  // <Routes>
-  //   <Route path="/components/JsonHandling/getQuizId" element={<QuizID handleButtonClick={handleButtonClick} />} />
-  //   <Route path="./components/JsonHandling/json-handler" element={<JsonHandler quizId={quizId} />} />
-  //   <Route path="./components/Creator/DetermineNumberOfNewQuestions" element={<DetermineNumberofQuestions prop={setQuestionsNum} />} />
-  //   <Route path="./components/Creator/CreateNewQuiz" element={<CreateNewQuiz prop ={[numofQuestions, name]}/>} />
-  //   <Route path="./components/Updater/updateQuiz" element={<CreateNewQuiz prop ={[numofQuestions, name]}/>} />
-  //   <Route path="./components/DeleteQuiz/deleteQuiz" element={<DeleteQuiz quizId={quizId}/>} />
-  // </Routes>
-
   return (
     <div>
       <div class="appContainer">
+      <div className="header">
+        <p>Hello CodeMaster!</p>
+      </div>
+      <div className="loadingScreen">
+        <Opener />
+      </div>
       {/* VIEW */}
       <QuizID handleButtonClick={handleButtonClick}/>
       {/* <h1 className="divider">OR</h1> */}
       {/* CREATE */}
       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
       <CreateNewQuiz prop ={[numofQuestions, name]}/>
-    </div>
     {showJsonHandler &&
       <div className="appContainer">
         {/* Grab */}
@@ -53,9 +49,10 @@ function CodeMaster() {
 
         {/* DELETE */}
         <DeleteQuiz quizId={quizId}/>
-    </div>
+      </div>
     }
     </div>
+  </div>
   );
 }
 
