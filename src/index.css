@@ -13,25 +13,60 @@ code {
 }
 
 .header {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
 
+.App {
+  height: 100vh;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
 .appContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  align-items: center;
+  height: 100%;
+  background-color: purple;
 }
 
-.modifierContainer {
-  display: flex;
+.newTestFormContainer{
+  display: none;
+  flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 50vw;
+  border: solid black 3px;
 }
 
-.selectorForm {
+.newTestForm {
   display: flex;
+  grid-template-rows: 1fr 1fr; 
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  row-gap: 2rem;
+}
+.newTestFormQuestions {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.languageSelectorForm {
+  display: none;
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
@@ -41,18 +76,61 @@ code {
   row-gap: 2rem;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-}
-.quizDropdown {
-  display: flex;
-  justify-content: center;
-  width: 20%;
+
+.submitFormContainer{
+  display: none;
+  width: 50vw;
+  grid-template-columns: 1fr;
   align-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: solid black 3px;
+  row-gap: 2rem;
 }
 
-.hidden{
-  display:none;
+.submitQuizForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.questionsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateContainer {
+  display: flex;
+}
+
+.deleteQuizContainer {
+  display: flex;
+}
+
+.divider {
+  display: none;
+}
+.openingPage {
+  display: flex;
+  flex-direction: column;
+  animation: fade-in 3s;
+  align-items: center;
+}
+
+.loadingButton {
+  width: 50%;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }

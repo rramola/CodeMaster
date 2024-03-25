@@ -1,3 +1,4 @@
+import Opener from "./components/OpeningPage/Main";
 import DetermineNumberofQuestions from "./components/CreateQuiz/DetermineNumberOfNewQuestions";
 import CreateNewQuiz from "./components/CreateQuiz/CreateNewQuiz";
 import QuizID from "./components/JsonHandling/getQuizId";
@@ -28,13 +29,15 @@ function CodeMaster() {
       <div className="header">
         <p>Hello CodeMaster!</p>
       </div>
+      <div className="loadingScreen">
+        <Opener />
+      </div>
       {/* VIEW */}
       <QuizID handleButtonClick={handleButtonClick}/>
       <h1 className="divider">OR</h1>
       {/* CREATE */}
       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
       <CreateNewQuiz prop ={[numofQuestions, name]}/>
-    </div>
     {showJsonHandler &&
       <div className="appContainer">
         {/* Grab */}
@@ -44,9 +47,10 @@ function CodeMaster() {
 
         {/* DELETE */}
         <DeleteQuiz quizId={quizId}/>
-    </div>
+      </div>
     }
     </div>
+  </div>
   );
 }
 

@@ -10,6 +10,7 @@ export default function QuizID({handleButtonClick}){
         document.querySelector('.languageSelectorFormContainer').style.display="none";
         document.querySelector('.newTestFormContainer').style.display="none";
         document.querySelector('.divider').style.display="none";
+        // document.querySelector(".questionsContainer").style.display="flex"
 
         e.preventDefault();
     }
