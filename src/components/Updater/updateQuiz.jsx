@@ -35,12 +35,12 @@ export default function EditQuiz({quizId}){
   return (
     <div className="updateContainer">
       <form className="selectorForm" onSubmit={handleSubmiter}>
-          <h1>Question creator</h1>
+          <h1 className='creatorTitle'>Question Creator</h1>
           <textarea placeholder='Please type new question here' id="createQuestion">
           </textarea>
           <textarea placeholder='Please type answer here' id="createAnswer">
           </textarea>
-          <button>Submit</button>
+          <button className='addButton'>Add To Quiz</button>
       </form>               
     </div> 
   )
