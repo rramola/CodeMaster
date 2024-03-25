@@ -33,7 +33,7 @@ export default function DetermineNumberofQuestions({prop},{create}){
                     required/>
                 </div>     
                 <div className='submitContainer'>
-                    <input type = 'submit'/>
+                    <button type = 'submit'>Submit</button>
                 </div>
             </form>
         </div>

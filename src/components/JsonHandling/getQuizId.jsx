@@ -27,7 +27,7 @@ export default function QuizID({handleButtonClick}){
       }, []);
 
     return (
-        <div className="languageSelectorFormContainer">
+        <div className="languageSelectorFormContainer" className = 'body'>
             <form className="languageSelectorForm" onSubmit = {handleSubmit}>
                 <h1>Select A Language To View Quiz</h1>
                 <select id="categorySelector" className="quizDropdown">

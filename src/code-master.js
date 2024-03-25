@@ -4,6 +4,8 @@ import QuizID from "./components/JsonHandling/getQuizId";
 import JsonHandler from "./components/JsonHandling/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
 import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
+import Header from './Styling/Header';
+import Footer from './Styling/Footer';
 import {useState} from 'react';
 
 
@@ -35,9 +37,7 @@ function CodeMaster() {
   return (
     <div className="App">
       <div class="appContainer">
-      <div className="header">
-        <p>Hello CodeMaster!</p>
-      </div>
+        <Header/>
       {/* VIEW */}
       <QuizID handleButtonClick={handleButtonClick}/>
       <h1 className="divider">OR</h1>

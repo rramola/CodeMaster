@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 // need to make sure they can't add quizes of the same language
+// creates id based on id of object before it. need a way to sort it to get the correct id
 export default function CreateNewQuiz({ prop }) {
     // console.log(prop)
     let num = prop[0];
