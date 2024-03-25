@@ -1,6 +1,16 @@
 html {
-  height: 100%;
-  background: linear-gradient(#F9E0E4, #d9bcc1,#210535,#210535)
+  height: 140%;
+  background: linear-gradient(#F9E0E4, #d9bcc1,#210535,#210535);
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
 
 .App {
@@ -39,8 +49,46 @@ html {
 
 .deleteQuizContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54vw;
+  height: 20vh;
+  margin-top: 15px;
+  background: #f7e7ec8e;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border-radius: 10px;
+  padding: auto;
 }
 
+.deleteQuizContainer button {
+  background-color: #fadbe5;
+  border: solid rgb(41, 5, 46) 2px;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border-radius: 10px;
+  font-size: 17px;
+  height: 1.7rem;
+  justify-content: center;
+  margin: auto;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.deleteQuizContainer button:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
+}
+
+.deleteQuizContainer h1 {
+  color: #310c2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
 .divider {
   display: none;
 }
@@ -52,6 +100,8 @@ html {
 }
 
 .languageSelectorForm {
+  box-shadow: 6px 6px #29052ebf;
+  background: #f7e7ec8e;
   align-items: center;
   border: solid black 1px;
   color: #210535;
@@ -62,26 +112,32 @@ html {
   padding: 4rem;
   row-gap: 2rem;
   width: 50vw;
+  border-radius: 10px;
 }
 
 .languageSelectorForm button {
-  background-color: #f7e7ec;
+  background-color: #fadbe5;
   border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
   font-size: 17px;
   height: 1.7rem;
   width: 7rem;
+  cursor: pointer;
 }
 
-.languageSelectorForm option {
-  width: 7rem;
+.languageSelectorForm button:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
 }
 
-.languageSelectorForm select {
-  background-color: #f7e7ec;
+
+.languageSelectorForm select,
+.languageSelectorForm option
+{
+  background-color: #fadbe5;;
   border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
   cursor: pointer;
   font-size: 18px;
@@ -90,13 +146,42 @@ html {
   width: 10rem;
 }
 
-.languageSelectorForm select:focus {
-  background-color: #f3dde4;
-  border: black 2px;
+.languageSelectorFormContainer select:focus, 
+.languageSelectorFormContainer select:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
+}
+
+
+.languageSelectorFormContainer h1 {
+  color: #310c2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
 }
 
 .loadingButton {
-  width: 50%;
+  width: 15rem;
+  background-color: #fadbe5;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  font-size: 17px;
+  height: 2rem;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.loadingButton:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
 }
 
 .newTestForm {
@@ -105,7 +190,7 @@ html {
 
 .newTestFormContainer {
   align-items: center;
-  background-color: #f3dde4;
+  background: #f7e7ec8e;
   border: solid black 1px;
   color: #210535;
   display: none;
@@ -116,32 +201,67 @@ html {
   padding: 1rem;
   row-gap: 1rem;
   width: 56vw;
+  border-radius: 10px;
 }
 
 .newTestFormContainer button {
-  background-color: #f7e7ec;
+  margin-top: .35em;
+  margin-left: 3rem;
+  background-color: #fadbe5;
   border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border-radius: 10px;
   font-size: 17px;
   height: 1.7rem;
   justify-content: center;
-  margin: auto;
   width: 7rem;
+  cursor: pointer;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+}
+
+.newTestFormContainer button:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
+}
+.newTestFormContainer h1 {
+  color: #310c2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
 }
 
 .newTestFormContainer input {
-  background-color: #f7e7ec;
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 7px;
+  margin-bottom: 2em;
   box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  background-color: #fadbe5;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   font-size: 18px;
   font-weight: 500;
   height: 2rem;
-  margin-bottom: 7px;
-  margin-top: 7px;
+  width: 12em;
+}
+
+.newTestFormContainer input:hover,
+.newTestFormContainer input:focus {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
+}
+
+{
+  margin-bottom: 2em;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  background-color: #fadbe5;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  height: 2rem;
   width: 12em;
 }
 
@@ -156,24 +276,44 @@ html {
   animation: fade-in 3s;
   display: flex;
   flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 26px;
 }
 
 .questionsContainer {
   display: flex;
+  width: 50vw;
+  height: fit-content;
   flex-direction: column;
+  justify-content: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size:larger;
   border: solid black 1px;
   padding: 2rem;
   margin: auto;
+  background: #f7e7ec8e;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  border-radius: 10px;
 }
 
-.submitContainer {
+.questionsContainer h1 {
+  color: #310c2a;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
 }
 
+.questionsContainer p {
+  padding: 0;
+  margin-left: 9.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+;}
+
+
 .submitFormContainer {
+  background: #f7e7ec8e;
   align-content: center;
   border: solid black 3px;
   display: none;
@@ -182,6 +322,60 @@ html {
   padding-top: 1rem;
   row-gap: 2rem;
   width: 50vw;
+  border-radius: 10px;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+}
+
+.submitFormContainer h1 {
+  color: #310c2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+
+.submitFormContainer button {
+  background-color: #fadbe5;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  font-size: 17px;
+  height: 1.7rem;
+  justify-content: center;
+  margin: auto;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 6px 6px #29052ebf;
+}
+
+.submitFormContainer button:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
+}
+
+.submitFormContainer input {
+  margin-right: 1em;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  background-color: #fadbe5;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 2rem;
+  width: 12em;
+}
+
+.submitFormContainer input:focus {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
+}
+
+.submitFormContainer input:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
 }
 
 .submitQuizForm {
@@ -193,4 +387,63 @@ html {
 
 .updateContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54vw;
+  height: 40vh;
+  margin-top: 15px;
+  background: #f7e7ec8e;
+  box-shadow: 6px 6px #29052ebf;
+  border-radius: 10px;
+  padding: auto;
+}
+
+.updateContainer h1 {
+  color: #310c2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+
+.updateContainer textarea {
+  background-color: #fadbe5;
+  margin-left: 1.5rem;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  height: 2rem;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  width: 18em;
+}
+
+.updateContainer textarea:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
+}
+
+.updateContainer button {
+  background-color: #fadbe5;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  font-size: 17px;
+  height: 1.7rem;
+  justify-content: center;
+  margin: auto;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  cursor: pointer;
+}
+
+.updateContainer button:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #1f0323;
 }

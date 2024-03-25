@@ -10,7 +10,6 @@ export default function QuizID({handleButtonClick}){
         handleButtonClick(selectedQuiz);
         document.querySelector('.languageSelectorFormContainer').style.display="none";
         document.querySelector('.newTestFormContainer').style.display="none";
-        document.querySelector('.divider').style.display="none";
         // document.querySelector(".questionsContainer").style.display="flex"
 
         e.preventDefault();
@@ -32,7 +31,7 @@ export default function QuizID({handleButtonClick}){
         <div className="languageSelectorFormContainer">
             <form className="languageSelectorForm" onSubmit = {handleSubmit}>
                 <h1>Select A Language</h1>
-                <select id="categorySelector" className="quizDropdown">
+                <select id="categorySelector">
                     {data.map(item => <option key={item} value={item.id}>{item.language}</option>)}
                 </select>
                     <button type='submit'>Submit</button>

@@ -3,7 +3,8 @@ import axios from "axios";
 
 export default function JsonHandler({quizId}) {
     const [singleQuiz, setSingleQuiz] = useState({});
-    let questions = []
+    let questions = [];
+    let answers = [];
     const axiosGetOneItem = async(id) => {
       await axios.get(`http://localhost:9000/getOne/${id}`)
       .then((result) => {
@@ -19,7 +20,8 @@ export default function JsonHandler({quizId}) {
 
     for (const item in myCurrentObject) {
       questions.push(item)
-    }
+    } 
+
 
     return (
       <div className="questionsContainer">

@@ -12,7 +12,6 @@ export default function DetermineNumberofQuestions({prop}){
         document.querySelector('.newTestFormContainer').style.display="none";
         document.querySelector(".submitFormContainer").style.display="grid";
         document.querySelector('.buttonContainer').style.display="flex";
-        document.querySelector('.divider').style.display="none";
         
 
     }
@@ -20,8 +19,8 @@ export default function DetermineNumberofQuestions({prop}){
     return (
         <div className='newTestFormContainer'>
             <h1>Create A New Quiz</h1>
-            <form className = 'newTestForm' onSubmit={handleSubmit}>
-                <div className='newTestFormQuestions'>
+            <form onSubmit={handleSubmit}>
+                <div>
                     <input 
                     id = 'language' 
                     type = 'text' 
@@ -35,10 +34,9 @@ export default function DetermineNumberofQuestions({prop}){
                     max = "10" 
                     placeholder='Number of Questions'
                     required/>
-                </div>     
-                <div className='submitContainer'>
+
                     <button type = 'submit'>Submit</button>
-                </div>
+                </div>     
             </form>
         </div>
     )
