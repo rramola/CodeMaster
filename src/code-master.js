@@ -29,7 +29,6 @@ function CodeMaster() {
     <div>
       <div class="appContainer">
       <div className="header">
-        <p>Hello CodeMaster!</p>
       </div>
       <div className="loadingScreen">
         <Opener />

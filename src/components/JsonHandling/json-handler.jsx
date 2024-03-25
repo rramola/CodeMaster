@@ -24,7 +24,7 @@ export default function JsonHandler({quizId}) {
     return (
       <div className="questionsContainer">
         <h1>{singleQuiz.language} Questions:</h1>
-          {questions.map(each => <p>Question: {each}</p>)}
+          {questions.map((each, index) => <p>{index + 1}. {each}</p>)}
       </div>
     )
 
