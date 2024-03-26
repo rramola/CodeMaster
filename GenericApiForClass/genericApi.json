@@ -25,13 +25,11 @@
   "id": 1,
   "language": "HTML/CSS",
   "questions": {
-   "7": "7",
    "How do you create an unordered list in HTML?": "<ul>",
    "What CSS property is used to change the text color?": "color",
    "How do you add a border to an element in CSS?": "border",
    "What HTML tag is used to define a paragraph?": "<p>",
    "How do you italicize text in HTML?": "<i>",
-   "eh": "eh"
   }
  }
 ]
