@@ -2,24 +2,25 @@ import React from 'react';
 import axios from 'axios';
 
 
-// need to make sure they can't add quizes of the same language
-// creates id based on id of object before it. need a way to sort it to get the correct id
 export default function CreateNewQuiz({ prop }) {
     let num = prop[0];
     let name = prop[1];
 
+    function handleReturn(){
+        return(
+            <></>
+        )
+    }
+
     function handleSubmit(e) {
         const questionsObject = {};
         document.querySelector('.submitFormContainer').style.display="none";
-        document.querySelector('.languageSelectorFormContainer').style.display="flex"
+        document.querySelector('.languageSelectorFormContainer').style.display="flex";
 
         for (let i = 1; i <= num; i ++) {
-            const questionInput = `Question ${i}`;
-            const answerInput = `Answer ${i}`;
-            const question = e.target.querySelector(`input[name="${questionInput}"]`).value;
-            const answer = e.target.querySelector(`input[name="${answerInput}"]`).value;
-
-        questionsObject[question] = answer;
+            const question = e.target.querySelector(`input[name="${`Question ${i}`}"]`).value;
+            const answer = e.target.querySelector(`input[name="${`Answer ${i}`}"]`).value;
+            questionsObject[question] = answer;
         }
 
         const newObject = {
@@ -58,9 +59,16 @@ export default function CreateNewQuiz({ prop }) {
                     </div>
                 );
             })}
-            <div className='buttonContainer'>
-                <button type='submit'>Submit</button>
-            </div>
+            <div className = 'createQuizButtons'>
+                <div className='buttonContainer'>
+                    <button type='submit'>Submit</button>
+                </div>
+                <div className = 'createReturnButton'>
+                    <form onSubmit = {handleReturn}>
+                        <button>Go Back</button>
+                    </form>
+                </div>
+            </div> 
         </form>
     </div>
     );

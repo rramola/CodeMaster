@@ -5,13 +5,10 @@ export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
     
     function handleSubmit(e){
-        e.preventDefault();
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         handleButtonClick(selectedQuiz);
         document.querySelector('.languageSelectorFormContainer').style.display="none";
         document.querySelector('.newTestFormContainer').style.display="none";
-        // document.querySelector(".questionsContainer").style.display="flex"
-
         e.preventDefault();
     }
     
@@ -30,8 +27,8 @@ export default function QuizID({handleButtonClick}){
     return (
         <div className="languageSelectorFormContainer">
             <form className="languageSelectorForm" onSubmit = {handleSubmit}>
-                <h1>Select A Language</h1>
-                <select id="categorySelector">
+                <h1>Select A Language To View Quiz</h1>
+                <select id="categorySelector" className = 'quizDropdown'>
                     {data.map(item => <option key={item} value={item.id}>{item.language}</option>)}
                 </select>
                     <button type='submit'>Submit</button>

@@ -1,6 +1,6 @@
 html {
-  height: 150%;
-  background: linear-gradient(#F9E0E4, #d9bcc1,#210535,#210535);
+  height: 10%;
+  background: linear-gradient( #FFCCEA, #180327,#180327) fixed;
 }
 
 
@@ -47,6 +47,17 @@ html {
   font-family: 'Courier New', Menlo, Monaco, Consolas, monospace;
 }
 
+.createQuizAnswer {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-right: 1rem;
+}
+
+.createQuizButtons {
+  display: flex;
+  column-gap: 5rem;
+  margin-bottom: 1rem;
+}
+
 .deleteQuizContainer {
   border: solid #7B337D 2px;
   display: flex;
@@ -55,14 +66,14 @@ html {
   width: 54vw;
   height: 20vh;
   margin-top: 15px;
-  background: #f7e7ec8e;
+  background: #bc7fcd;
   box-shadow: 6px 6px #240328;
   border-radius: 10px;
   padding: auto;
 }
 
 .deleteQuizContainer button {
-  background-color: #C874B2;
+  background-color: #EC66B2;
   border: solid rgb(41, 5, 46) 2px;
   box-shadow: 6px 6px #210535;
   border-radius: 10px;
@@ -83,7 +94,7 @@ html {
 }
 
 .deleteQuizContainer h1 {
-  color: #430D4B;
+  color: #28255A;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +113,7 @@ html {
 
 .languageSelectorForm {
   box-shadow: 6px 6px #240328;
-  background: #f7e7ec8e;
+  background: #bc7fcd;
   align-items: center;
   border: solid #7B337D 2px;
   color: #210535;
@@ -117,7 +128,7 @@ html {
 }
 
 .languageSelectorForm button {
-  background-color: #C874B2;
+  background-color: #EC66B2;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
   box-shadow: 6px 6px #210535;
@@ -136,7 +147,7 @@ html {
 .languageSelectorForm select,
 .languageSelectorForm option
 {
-  background-color: #fadbe5;;
+  background-color: #FFCCEA;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
   box-shadow: 6px 6px #210535;
@@ -155,34 +166,12 @@ html {
 
 
 .languageSelectorFormContainer h1 {
-  color: #430D4B;
+  color: #28255A;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 40px;
-}
-
-.loadingButton {
-  width: 15rem;
-  background-color: #C874B2;
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 10px;
-  box-shadow: 6px 6px #210535;
-  font-size: 17px;
-  height: 2rem;
-  justify-content: center;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.loadingButton:hover {
-  background: whitesmoke;
-    box-shadow: 6px 6px #210535;
 }
 
 .newTestForm {
@@ -192,7 +181,7 @@ html {
 
 .newTestFormContainer {
   box-shadow: 6px 6px #240328;
-  background: #f7e7ec8e;
+  background: #bc7fcd;
   align-items: center;
   border: solid #7B337D 2px;
   color: #210535;
@@ -207,7 +196,7 @@ html {
 }
 
 .newTestFormContainer button {
-  background-color: #C874B2;
+  background-color: #EC66B2;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
   font-size: 17px;
@@ -225,7 +214,7 @@ html {
     box-shadow: 6px 6px #210535;
 }
 .newTestFormContainer h1 {
-  color: #430D4B;
+  color: #28255A;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,7 +225,7 @@ html {
 .newTestFormContainer input {
   margin-bottom: 2em;
   box-shadow: 6px 6px #210535;
-  background-color: #fadbe5;
+  background-color: #FFCCEA;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
   cursor: pointer;
@@ -267,7 +256,13 @@ html {
   flex-direction: column;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 26px;
+  overflow: hidden;
 }
+
+.openingPage button {
+  background: pink;
+}
+
 
 .questionsContainer {
   display: flex;
@@ -279,7 +274,7 @@ html {
   font-size:larger;
   border: solid #7B337D 2px;
   padding: 2rem;
-  background: #f7e7ec8e;
+  background: #bc7fcd;
   box-shadow: 6px 6px hsl(294, 86%, 8%);
   border-radius: 10px;
 }
@@ -287,7 +282,7 @@ html {
 
 .questionsContainer h1 {
   text-wrap: wrap;
-  color: #430D4B;
+  color: #28255A;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,11 +297,24 @@ html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 ;}
 
+.returnButton {
+  border: solid #7B337D 2px;
+  display: flex;
+  justify-content: center;
+  width: 54vw;
+  margin-top: 15px;
+  background: #f7e7ec8e;
+  box-shadow: 6px 6px #240328;
+  padding: auto;
+}
+
+
 
 .submitFormContainer {
   background: #f7e7ec8e;
   align-content: center;
   border: solid #7B337D 2px;
+  
   display: none;
   grid-template-columns: 1fr;
   padding-bottom: 1rem;
@@ -328,16 +336,18 @@ html {
 
 .submitFormContainer button {
   background-color: #C874B2;
-  border: solid rgb(41, 5, 46) 2px;
+  border: solid #7B337D 2px;
   border-radius: 10px;
   font-size: 17px;
   height: 1.7rem;
   justify-content: center;
+  margin: auto;
   width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   box-shadow: 6px 6px #210535;
-  margin-top: .35em;
-  margin-left: 3rem;
 }
 
 .submitFormContainer button:hover {
@@ -438,20 +448,151 @@ html {
     box-shadow: 6px 6px #210535;
 }
 
+.submitFormContainer {
+  background: #bc7fcd;
+  align-content: center;
+  border: solid #7B337D 2px;
+  display: none;
+  grid-template-columns: 1fr;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  row-gap: 2rem;
+  width: 50vw;
+  border-radius: 10px;
+  box-shadow: 6px 6px #240328;
+}
+
+.submitFormContainer h1 {
+  color: #28255A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+
+.submitFormContainer button {
+  background-color: #EC66B2;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  font-size: 17px;
+  height: 1.7rem;
+  justify-content: center;
+  width: 7rem;
+  cursor: pointer;
+  box-shadow: 6px 6px #210535;
+  margin-top: .35em;
+}
+
+.submitFormContainer button:hover {
+  background: whitesmoke;
+    box-shadow: 6px 6px #210535;
+}
+
+.submitFormContainer input {
+  margin-right: 1em;
+  box-shadow: 6px 6px #210535;
+  background-color: #FFCCEA;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 2rem;
+  width: 12em;
+}
+
+.submitFormContainer input:focus {
+  background: whitesmoke;
+    box-shadow: 6px 6px #210535;
+}
+
+.submitFormContainer input:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #210535;
+}
+
+.submitQuizForm {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.updateContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54vw;
+  height: 40vh;
+  margin-top: 15px;
+  background: #bc7fcd;
+  box-shadow: 6px 6px #240328;
+  border-radius: 10px;
+  padding: auto;
+  border: solid #7B337D 2px;
+}
+
+.updateContainer h1 {
+  color: #28255A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+
+.updateContainer textarea {
+  background-color: #FFCCEA;
+  margin-left: 1.5rem;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  height: 2rem;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  width: 18em;
+}
+
+.updateContainer textarea:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #210535;
+}
+
+.updateContainer button {
+  background-color: #EC66B2;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  font-size: 17px;
+  height: 1.7rem;
+  justify-content: center;
+  margin: auto;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px #210535;
+  cursor: pointer;
+}
+
+.updateContainer button:hover {
+  background: whitesmoke;
+    box-shadow: 6px 6px #210535;
+}
+
 .hidden {
   display: none;
 }
 
 .hiddenDiv {
-  display: flex;
-  height: 15vh;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-  width: 50vw;
-  border: solid black;
-  font-weight:300;
-  font-size: 18x;
+  margin-top: 10px; /* Add margin to create space between text areas and hidden div */
+  width: auto;
+  max-width: 80%;
+  padding: auto;
+  font-weight: 300;
+  font-size: 18px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #372263;
   border: solid rgb(41, 5, 46) 2px;
@@ -465,5 +606,11 @@ html {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+.textAreaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 

@@ -19,14 +19,12 @@ export default function DetermineNumberofQuestions({ prop }) {
 
     const nameList = data.map(item => item.language.toLowerCase());
 
-    console.log(nameList);
-
     function handleSubmit(e) {
         e.preventDefault();
         let num = Number(document.querySelector('#number').value);
         let language = document.querySelector('#language').value;
 
-        if (nameList.includes(language.toLowerCase())) {
+        if (nameList.includes(language.toLowerCase()) || !isNaN(language)) {
             setShowExistingQuizDiv(true);
             return;
         }
@@ -34,7 +32,7 @@ export default function DetermineNumberofQuestions({ prop }) {
         prop(num, language);
         document.querySelector('.languageSelectorFormContainer').style.display = "none";
         document.querySelector('.newTestFormContainer').style.display = "none";
-        document.querySelector(".submitFormContainer").style.display = "grid";
+        document.querySelector('.submitFormContainer').style.display = "grid";
         document.querySelector('.buttonContainer').style.display = "flex";
     }
 
@@ -67,7 +65,8 @@ export default function DetermineNumberofQuestions({ prop }) {
             {showExistingQuizDiv && (
                 <div id='hiddenDiv' className='hiddenDiv' onClick={handleDivClick}>
                     <p>
-                        A quiz for this language already exists!!! Please choose a different language!
+                        <p>Please make sure you're using a valid coding language for the name!</p>
+                        <p>Hint: Are you trying to create a quiz we already have? </p>
                         <p className = 'closeMessage'>*Click here to close this message*</p>
                     </p>
                 </div>

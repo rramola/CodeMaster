@@ -10,11 +10,20 @@ export default function DeleteQuiz({quizId}){
     axiosDeleteData([quizId])
   }
 
+  function handleReturn(){
+    return(
+      <></>
+    )
+  }
+
   return(
     <div className='deleteQuizContainer'>
+      <h1>Delete Quiz</h1>
       <form onSubmit={handleSubmitter}>
-        <h1>Delete Quiz</h1>
-        <button>Submit</button>
+        <button>Delete</button>
+        <form onSubmit = {handleReturn}>
+          <button>Go Back</button>
+        </form>
       </form>
     </div>
   )

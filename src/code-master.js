@@ -6,7 +6,6 @@ import JsonHandler from "./components/JsonHandling/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
 import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
 import Header from './Styling/Header';
-import Footer from './Styling/Footer';
 import {useState} from 'react';
 
 function CodeMaster() {
@@ -26,31 +25,29 @@ function CodeMaster() {
   }
 
   return (
-    <div>
-      <div class="appContainer">
-      <div className="header">
-      </div>
-      <div className="loadingScreen">
-        <Opener />
-      </div>
-      {/* VIEW */}
-      <QuizID handleButtonClick={handleButtonClick}/>
-      {/* <h1 className="divider">OR</h1> */}
-      {/* CREATE */}
-      <DetermineNumberofQuestions prop = {setQuestionsNum}/>
-      <CreateNewQuiz prop ={[numofQuestions, name]}/>
-    {showJsonHandler &&
-      <div className="appContainer">
-        {/* Grab */}
-        <JsonHandler quizId = {quizId}/>
-        {/* EDIT */}
-        <EditQuiz quizId={quizId}/> 
+    <div className="App">
+        <div class="appContainer">
+        <div className="loadingScreen">
+          <Opener />
+        </div>
+        {/* VIEW */}
+        <QuizID handleButtonClick={handleButtonClick} />
+        <h1 className="divider">OR</h1>
+        {/* CREATE */}
+        <DetermineNumberofQuestions prop = {setQuestionsNum}/>
+        <CreateNewQuiz prop ={[numofQuestions, name]}/>
+      {showJsonHandler &&
+        <div className="appContainer">
+          {/* Grab */}
+          <JsonHandler quizId = {quizId} />
+          {/* EDIT */}
+          <EditQuiz quizId={quizId} /> 
 
-        {/* DELETE */}
-        <DeleteQuiz quizId={quizId}/>
-      </div>
-    }
-    </div>
+          {/* DELETE */}
+          <DeleteQuiz quizId={quizId} />
+
+        </div>
+      }</div>
   </div>
   );
 }
