@@ -36,9 +36,9 @@ export default function EditQuiz({quizId}){
     <div className="updateContainer">
       <form className="selectorForm" onSubmit={handleSubmiter}>
           <h1>Question Creator</h1>
-          <textarea placeholder='Please type new question here' id="createQuestion">
+          <textarea placeholder='Please type new question here' id="createQuestion" required>
           </textarea>
-          <textarea placeholder='Please type answer here' id="createAnswer">
+          <textarea placeholder='Please type answer here' id="createAnswer" required>
           </textarea>
           <button>Submit</button>
       </form>               

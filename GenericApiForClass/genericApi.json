@@ -7,7 +7,8 @@
    "What CSS property is used to change the text color?": "color",
    "How do you add a border to an element in CSS?": "border",
    "What HTML tag is used to define a paragraph?": "<p>",
-   "How do you italicize text in HTML?": "<i>"
+   "How do you italicize text in HTML?": "<i>",
+   "eh": "eh"
   }
  },
  {
@@ -29,15 +30,7 @@
    "How do you create a list in Python?": "[]",
    "How do you comment a single line in Python?": "#",
    "How do you convert an integer to a string in Python?": "str()",
-   "How do you create a multi-line string in Python?": "triple-quotes",
-   "eh": "eh"
-  }
- },
- {
-  "id": 1,
-  "language": "Django",
-  "questions": {
-   "eh": "eh"
+   "How do you create a multi-line string in Python?": "triple-quotes"
   }
  }
 ]

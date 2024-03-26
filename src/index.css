@@ -1,5 +1,5 @@
 html {
-  height: 140%;
+  height: 150%;
   background: linear-gradient(#F9E0E4, #d9bcc1,#210535,#210535);
 }
 
@@ -48,6 +48,7 @@ html {
 }
 
 .deleteQuizContainer {
+  border: solid #7B337D 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,15 +56,15 @@ html {
   height: 20vh;
   margin-top: 15px;
   background: #f7e7ec8e;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #240328;
   border-radius: 10px;
   padding: auto;
 }
 
 .deleteQuizContainer button {
-  background-color: #fadbe5;
+  background-color: #C874B2;
   border: solid rgb(41, 5, 46) 2px;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
   border-radius: 10px;
   font-size: 17px;
   height: 1.7rem;
@@ -78,11 +79,11 @@ html {
 
 .deleteQuizContainer button:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
 
 .deleteQuizContainer h1 {
-  color: #310c2a;
+  color: #430D4B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,10 +101,10 @@ html {
 }
 
 .languageSelectorForm {
-  box-shadow: 6px 6px #29052ebf;
+  box-shadow: 6px 6px #240328;
   background: #f7e7ec8e;
   align-items: center;
-  border: solid black 1px;
+  border: solid #7B337D 2px;
   color: #210535;
   display: none;
   flex-direction: column;
@@ -116,10 +117,10 @@ html {
 }
 
 .languageSelectorForm button {
-  background-color: #fadbe5;
+  background-color: #C874B2;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
   font-size: 17px;
   height: 1.7rem;
   width: 7rem;
@@ -128,7 +129,7 @@ html {
 
 .languageSelectorForm button:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
 
 
@@ -138,7 +139,7 @@ html {
   background-color: #fadbe5;;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -149,12 +150,12 @@ html {
 .languageSelectorFormContainer select:focus, 
 .languageSelectorFormContainer select:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
 
 
 .languageSelectorFormContainer h1 {
-  color: #310c2a;
+  color: #430D4B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,10 +165,10 @@ html {
 
 .loadingButton {
   width: 15rem;
-  background-color: #fadbe5;
+  background-color: #C874B2;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
   font-size: 17px;
   height: 2rem;
   justify-content: center;
@@ -181,33 +182,32 @@ html {
 
 .loadingButton:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
 
 .newTestForm {
   align-items: center;
+
 }
 
 .newTestFormContainer {
-  align-items: center;
+  box-shadow: 6px 6px #240328;
   background: #f7e7ec8e;
-  border: solid black 1px;
+  align-items: center;
+  border: solid #7B337D 2px;
   color: #210535;
   display: none;
   flex-direction: column;
-  justify-content: center;
   margin: auto;
-  margin-top: 25px;
-  padding: 1rem;
-  row-gap: 1rem;
-  width: 56vw;
+  margin-top: 60px;
+  padding: 4rem;
+  row-gap: 2rem;
+  width: 50vw;
   border-radius: 10px;
 }
 
 .newTestFormContainer button {
-  margin-top: .35em;
-  margin-left: 3rem;
-  background-color: #fadbe5;
+  background-color: #C874B2;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
   font-size: 17px;
@@ -215,15 +215,17 @@ html {
   justify-content: center;
   width: 7rem;
   cursor: pointer;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
+  margin-top: .35em;
+  margin-left: 3rem;
 }
 
 .newTestFormContainer button:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
 .newTestFormContainer h1 {
-  color: #310c2a;
+  color: #430D4B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,7 +235,7 @@ html {
 
 .newTestFormContainer input {
   margin-bottom: 2em;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
   background-color: #fadbe5;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
@@ -248,21 +250,7 @@ html {
 .newTestFormContainer input:hover,
 .newTestFormContainer input:focus {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
-}
-
-{
-  margin-bottom: 2em;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
-  background-color: #fadbe5;
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  font-size: 18px;
-  font-weight: 500;
-  height: 2rem;
-  width: 12em;
+    box-shadow: 6px 6px #210535;
 }
 
 .newTestFormQuestions {
@@ -272,6 +260,7 @@ html {
 }
 
 .openingPage {
+  color: #430D4B;
   align-items: center;
   animation: fade-in 3s;
   display: flex;
@@ -288,16 +277,17 @@ html {
   justify-content: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size:larger;
-  border: solid black 1px;
+  border: solid #7B337D 2px;
   padding: 2rem;
-  margin: auto;
   background: #f7e7ec8e;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px hsl(294, 86%, 8%);
   border-radius: 10px;
 }
 
+
 .questionsContainer h1 {
-  color: #310c2a;
+  text-wrap: wrap;
+  color: #430D4B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,8 +296,9 @@ html {
 }
 
 .questionsContainer p {
+  display: flex;
+  color: #430D4B;
   padding: 0;
-  margin-left: 9.5rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 ;}
 
@@ -315,7 +306,7 @@ html {
 .submitFormContainer {
   background: #f7e7ec8e;
   align-content: center;
-  border: solid black 3px;
+  border: solid #7B337D 2px;
   display: none;
   grid-template-columns: 1fr;
   padding-bottom: 1rem;
@@ -323,11 +314,11 @@ html {
   row-gap: 2rem;
   width: 50vw;
   border-radius: 10px;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #240328;
 }
 
 .submitFormContainer h1 {
-  color: #310c2a;
+  color: #430D4B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,29 +327,27 @@ html {
 }
 
 .submitFormContainer button {
-  background-color: #fadbe5;
+  background-color: #C874B2;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
   font-size: 17px;
   height: 1.7rem;
   justify-content: center;
-  margin: auto;
   width: 7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
-  box-shadow: 6px 6px #29052ebf;
+  box-shadow: 6px 6px #210535;
+  margin-top: .35em;
+  margin-left: 3rem;
 }
 
 .submitFormContainer button:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
 
 .submitFormContainer input {
   margin-right: 1em;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
   background-color: #fadbe5;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
@@ -370,12 +359,12 @@ html {
 
 .submitFormContainer input:focus {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
 
 .submitFormContainer input:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+  box-shadow: 6px 6px #210535;
 }
 
 .submitQuizForm {
@@ -393,13 +382,14 @@ html {
   height: 40vh;
   margin-top: 15px;
   background: #f7e7ec8e;
-  box-shadow: 6px 6px #29052ebf;
+  box-shadow: 6px 6px #240328;
   border-radius: 10px;
   padding: auto;
+  border: solid #7B337D 2px;
 }
 
 .updateContainer h1 {
-  color: #310c2a;
+  color: #430D4B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,11 +414,11 @@ html {
 
 .updateContainer textarea:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+  box-shadow: 6px 6px #210535;
 }
 
 .updateContainer button {
-  background-color: #fadbe5;
+  background-color: #C874B2;
   border: solid rgb(41, 5, 46) 2px;
   border-radius: 10px;
   font-size: 17px;
@@ -439,11 +429,41 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
+  box-shadow: 6px 6px #210535;
   cursor: pointer;
 }
 
 .updateContainer button:hover {
   background: whitesmoke;
-  box-shadow: 6px 6px #1f0323;
+    box-shadow: 6px 6px #210535;
 }
+
+.hidden {
+  display: none;
+}
+
+.hiddenDiv {
+  display: flex;
+  height: 15vh;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  border: solid black;
+  font-weight:300;
+  font-size: 18x;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #372263;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  box-shadow: 6px 6px #240328;
+  color: #F5D5E0;
+}
+
+.closeMessage{
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
