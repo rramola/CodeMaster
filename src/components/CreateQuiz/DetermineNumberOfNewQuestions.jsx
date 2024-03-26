@@ -48,7 +48,7 @@ export default function DetermineNumberofQuestions({ prop }) {
                     <input
                         id='language'
                         type='text'
-                        placeholder='Enter language name'
+                        placeholder='Enter language name:'
                         required />
 
                     <input
@@ -56,7 +56,7 @@ export default function DetermineNumberofQuestions({ prop }) {
                         type='number'
                         min="1"
                         max="10"
-                        placeholder='Number of Questions'
+                        placeholder='Number of Questions:'
                         required />
 
                     <button type='submit'>Submit</button>

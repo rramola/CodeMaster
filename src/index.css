@@ -63,17 +63,24 @@ html {
 }
 
 .deleteQuizContainer {
+  margin-bottom: 1rem;
   border: solid #7B337D 2px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 54vw;
-  height: 15vh;
-  margin-top: 15px;
+  height: 20vh;
+  margin-top: 10px;
   background: #bc7fcd;
   box-shadow: 6px 6px #240328;
   border-radius: 10px;
   padding: auto;
+}
+
+.deleteQuizContainer form {
+  padding-right: 3rem;
+  /* margin-left: .2rem; */
 }
 
 .deleteQuizContainer button {
@@ -84,11 +91,10 @@ html {
   font-size: 17px;
   height: 1.7rem;
   justify-content: center;
-  margin: auto;
   width: 7rem;
-  display: flex;
+  display: inline-block;
+  margin-left: 2rem;
   justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -116,6 +122,7 @@ html {
 }
 
 .languageSelectorForm {
+  height: 20rem;
   box-shadow: 6px 6px #240328;
   background: #bc7fcd;
   align-items: center;
@@ -125,9 +132,7 @@ html {
   flex-direction: column;
   margin: auto;
   margin-top: 60px;
-  padding: 4rem;
-  row-gap: 2rem;
-  width: 50vw;
+  width: 49rem;
   border-radius: 10px;
 }
 
@@ -184,6 +189,7 @@ html {
 }
 
 .newTestFormContainer {
+  height: 20rem;
   box-shadow: 6px 6px #240328;
   background: #bc7fcd;
   align-items: center;
@@ -192,10 +198,11 @@ html {
   display: none;
   flex-direction: column;
   margin: auto;
-  margin-top: 60px;
-  padding: 4rem;
-  row-gap: 2rem;
-  width: 50vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* padding: 4rem; */
+  /* row-gap: 2rem; */
+  width: 49rem;
   border-radius: 10px;
 }
 
@@ -291,6 +298,7 @@ html {
 }
 
 .questionsContainer {
+  margin-top: rem;
   height: 22rem;
   display: flex;
   width: 50vw;
@@ -299,14 +307,13 @@ html {
   font-size:larger;
   border: solid #7B337D 2px;
   padding: 1.7rem;
-  margin: auto;
   background: #bc7fcd;
   box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .questionsContainer h1 {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   color: #28255A;
   align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -314,7 +321,7 @@ html {
 }
 
 .questionsContainer p {
-  margin-bottom: .5rem;
+  line-height: 2rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 ;}
 
@@ -409,7 +416,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 54vw;
-  height: 50vh;
+  height: 25rem;
   margin-top: 15px;
   background: #f7e7ec8e;
   box-shadow: 6px 6px #240328;
@@ -419,7 +426,7 @@ html {
 }
 
 .updateContainer h1 {
-  margin-bottom: .75rem;
+  margin-bottom: .5rem;
   color: #430D4B;
   display: flex;
   justify-content: center;
@@ -428,7 +435,7 @@ html {
   font-size: 40px;
 }
 
-.updateContainer textarea {
+.updateContainer input {
   background-color: #fadbe5;
   margin-left: 1.5rem;
   border: solid rgb(41, 5, 46) 2px;
@@ -443,7 +450,7 @@ html {
   width: 18em;
 }
 
-.updateContainer textarea:hover {
+.updateContainer input:hover {
   background: whitesmoke;
   box-shadow: 6px 6px #210535;
 }
@@ -638,5 +645,18 @@ html {
 .centeringQuestions {
   width: 70%;
   line-height: 2rem;
+  margin: auto;
+  padding-left: 5rem;
 }
 
+.languageSelectorFormContainer,
+.updateContainer,
+.deleteQuizContainer {
+  margin-bottom: .4rem;
+}
+
+input::placeholder {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

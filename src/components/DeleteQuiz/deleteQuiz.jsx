@@ -11,9 +11,7 @@ export default function DeleteQuiz({quizId}){
   }
 
   function handleReturn(){
-    return(
-      <></>
-    )
+    window.history.back();
   }
 
   return(
@@ -21,9 +19,7 @@ export default function DeleteQuiz({quizId}){
       <h1>Delete Quiz</h1>
       <form onSubmit={handleSubmitter}>
         <button>Delete</button>
-        <form onSubmit = {handleReturn}>
-          <button>Go Back</button>
-        </form>
+        <button type = 'button' onClick = {handleReturn}>Go Back</button>
       </form>
     </div>
   )

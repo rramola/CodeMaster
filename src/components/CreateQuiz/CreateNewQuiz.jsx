@@ -1,26 +1,28 @@
 import React from 'react';
 import axios from 'axios';
 
-
 export default function CreateNewQuiz({ prop }) {
     let num = prop[0];
     let name = prop[1];
 
     function handleReturn(){
         return(
-            <></>
+          <></>
         )
     }
 
     function handleSubmit(e) {
         const questionsObject = {};
         document.querySelector('.submitFormContainer').style.display="none";
-        document.querySelector('.languageSelectorFormContainer').style.display="flex";
+        document.querySelector('.languageSelectorFormContainer').style.display="flex"
 
         for (let i = 1; i <= num; i ++) {
-            const question = e.target.querySelector(`input[name="${`Question ${i}`}"]`).value;
-            const answer = e.target.querySelector(`input[name="${`Answer ${i}`}"]`).value;
-            questionsObject[question] = answer;
+            const questionInput = `Question ${i}`;
+            const answerInput = `Answer ${i}`;
+            const question = e.target.querySelector(`input[name="${questionInput}"]`).value;
+            const answer = e.target.querySelector(`input[name="${answerInput}"]`).value;
+
+        questionsObject[question] = answer;
         }
 
         const newObject = {
@@ -40,7 +42,7 @@ export default function CreateNewQuiz({ prop }) {
 
     return (
         <div className='submitFormContainer'>
-            <h1>Enter {name} Questions</h1>
+            <h1>Enter {name} Questions & Answers</h1>
             <form onSubmit={handleSubmit} className='submitQuizForm'>
             {Array.from({ length: num }, (_, index) => {
                 return (
@@ -48,27 +50,28 @@ export default function CreateNewQuiz({ prop }) {
                         <input 
                         type="text"
                         name = {`Question ${index + 1}`}
-                        placeholder = {`Question ${index + 1}`} 
+                        placeholder = {`Question ${index + 1}:`}
                         required />
 
                         <input 
                         type="text" 
                         name = {`Answer ${index + 1}`}
-                        placeholder={`Answer ${index + 1}`} 
+                        placeholder={`Answer ${index + 1}:`} 
                         required />
                     </div>
                 );
             })}
-            <div className = 'createQuizButtons'>
+            <div className='createQuizButtons'>
                 <div className='buttonContainer'>
                     <button type='submit'>Submit</button>
                 </div>
-                <div className = 'createReturnButton'>
-                    <form onSubmit = {handleReturn}>
-                        <button>Go Back</button>
-                    </form>
+                <div className="createReturnButton">
+                
+                <form onSubmit={handleReturn}>
+                    <button>Go Back</button>
+                </form>
                 </div>
-            </div> 
+            </div>
         </form>
     </div>
     );
