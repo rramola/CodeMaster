@@ -1,8 +1,12 @@
 html {
-  height: 10%;
+  height: 0%;
   background: linear-gradient( #FFCCEA, #180327,#180327) fixed;
 }
 
+* {
+  margin: auto;
+  padding: 0;
+}
 
 @keyframes fade-in {
   from {
@@ -64,7 +68,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 54vw;
-  height: 20vh;
+  height: 15vh;
   margin-top: 15px;
   background: #bc7fcd;
   box-shadow: 6px 6px #240328;
@@ -249,51 +253,68 @@ html {
 }
 
 .openingPage {
-  color: #430D4B;
+  color: #ec7abd;
+  text-shadow: 3px 1px #830596;
   align-items: center;
   animation: fade-in 3s;
   display: flex;
   flex-direction: column;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 26px;
-  overflow: hidden;
+  font-size: 35px;
+  margin-top: 9rem;
 }
 
 .openingPage button {
-  background: pink;
+  width: 15rem;
+  background-color: #EC66B2;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  box-shadow: 6px 6px #491171;
+  font-size: 17px;
+  height: 2rem;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
 }
 
+.openingPage h1 {
+  padding-bottom: 4rem;
+}
+
+.openingPage button:hover {
+  background: whitesmoke;
+  box-shadow: 6px 6px #5f1a90; 
+}
 
 .questionsContainer {
+  height: 22rem;
   display: flex;
   width: 50vw;
-  height: fit-content;
   flex-direction: column;
-  justify-content: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size:larger;
   border: solid #7B337D 2px;
-  padding: 2rem;
+  padding: 1.7rem;
+  margin: auto;
   background: #bc7fcd;
-  box-shadow: 6px 6px hsl(294, 86%, 8%);
+  box-shadow: 6px 6px rgba(41, 5, 46, 0.749);
   border-radius: 10px;
 }
 
-
 .questionsContainer h1 {
-  text-wrap: wrap;
+  margin-bottom: 1rem;
   color: #28255A;
-  display: flex;
-  justify-content: center;
   align-items: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 40px;
 }
 
 .questionsContainer p {
-  display: flex;
-  color: #430D4B;
-  padding: 0;
+  margin-bottom: .5rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 ;}
 
@@ -314,7 +335,6 @@ html {
   background: #f7e7ec8e;
   align-content: center;
   border: solid #7B337D 2px;
-  
   display: none;
   grid-template-columns: 1fr;
   padding-bottom: 1rem;
@@ -389,7 +409,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 54vw;
-  height: 40vh;
+  height: 50vh;
   margin-top: 15px;
   background: #f7e7ec8e;
   box-shadow: 6px 6px #240328;
@@ -399,6 +419,7 @@ html {
 }
 
 .updateContainer h1 {
+  margin-bottom: .75rem;
   color: #430D4B;
   display: flex;
   justify-content: center;
@@ -612,5 +633,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.centeringQuestions {
+  width: 70%;
+  line-height: 2rem;
 }
 

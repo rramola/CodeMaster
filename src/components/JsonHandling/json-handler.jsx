@@ -26,7 +26,10 @@ export default function JsonHandler({quizId}) {
     return (
       <div className="questionsContainer">
         <h1>{singleQuiz.language} Questions:</h1>
-          {questions.map((each, index) => <p>{index + 1}. {each}</p>)}
+          <div className = 'centeringQuestions'>
+            {questions.map((each, index) => <p>{index + 1}. {each}</p>)}
+          </div>
+          
       </div>
     )
 
