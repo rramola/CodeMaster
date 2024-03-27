@@ -131,6 +131,10 @@ html {
   position: fixed;
   bottom: 0%;
   width: 100%;
+  background-color: #EC66B2;
+  border: solid rgb(41, 5, 46) 2px;
+  box-shadow: 6px 6px #210535;
+  border-radius: 10px;
 }
 
 .navBar {
