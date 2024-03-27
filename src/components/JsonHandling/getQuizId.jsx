@@ -5,11 +5,11 @@ export default function QuizID({handleButtonClick}){
     const [data, setData] = useState([]);
     
     function handleSubmit(e){
+        e.preventDefault();
         const selectedQuiz = e.target.querySelector('#categorySelector').value;
         handleButtonClick(selectedQuiz);
         document.querySelector('.languageSelectorFormContainer').style.display="none";
         document.querySelector('.newTestFormContainer').style.display="none";
-        e.preventDefault();
     }
     
     const axiosGetAllData = async() => {

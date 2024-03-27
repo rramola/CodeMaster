@@ -6,13 +6,14 @@ import JsonHandler from "./components/JsonHandling/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
 import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
 import Header from './Styling/Header';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
   const [showJsonHandler, setShowJson] = useState(false);
   const [numofQuestions, setnumofQuestions] = useState();
   const [name, setName] = useState('');
+  const [opener, setOpener] = useState(true);
 
   function handleButtonClick(id){
     setQuizId(id);
@@ -24,34 +25,42 @@ function CodeMaster() {
     setName(name);
   }
 
-  return (
-    <div className="App">
-        <div class="appContainer">
-        <div className="loadingScreen">
-          <Opener />
-        </div>
-        {/* VIEW */}
-        <QuizID handleButtonClick={handleButtonClick} />
-        <h1 className="divider">OR</h1>
-        {/* CREATE */}
-        <DetermineNumberofQuestions prop = {setQuestionsNum}/>
-        <CreateNewQuiz prop ={[numofQuestions, name]}/>
-      {showJsonHandler &&
-        <div className="appContainer">
-          {/* Grab */}
-          <JsonHandler quizId = {quizId} />
-          {/* EDIT */}
-          <EditQuiz quizId={quizId} /> 
+  function setOpenerFalse(){
+    setOpener(false);
+  }
 
-          {/* DELETE */}
-          <DeleteQuiz quizId={quizId} />
+  useEffect(() => {
+    setOpenerFalse();
+  }, []);
+  
+    return(
+      opener ? <QuizID/> : <Opener/>
+    )
+  // return (
+  //   <div className="App">
+  //       <div class="appContainer">
 
-        </div>
-      }</div>
-  </div>
-  );
+  //       {/* VIEW */}
+  //       <QuizID handleButtonClick={handleButtonClick} />
+
+  //       {/* CREATE */}
+  //       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
+  //       <CreateNewQuiz prop ={[numofQuestions, name]}/>
+  //     {showJsonHandler &&
+  //       <div className="appContainer">
+  //         {/* Grab */}
+  //         <JsonHandler quizId = {quizId} />
+  //         {/* EDIT */}
+  //         <EditQuiz quizId={quizId} /> 
+
+  //         {/* DELETE */}
+  //         <DeleteQuiz quizId={quizId} />
+
+  //       </div>
+  //     }</div>
+  // </div>
+  // );
 }
 
 export default CodeMaster;
-
 
