@@ -1,15 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-export default function CreateNewQuiz({ prop }) {
-    let num = prop[0];
-    let name = prop[1];
-
-    function handleReturn(){
-        return(
-          <></>
-        )
-    }
+export default function CreateNewQuiz({ prop}) {
+    const num = prop[0];
+    const name = prop[1];
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         const questionsObject = {};
@@ -17,12 +13,10 @@ export default function CreateNewQuiz({ prop }) {
         document.querySelector('.languageSelectorFormContainer').style.display="flex"
 
         for (let i = 1; i <= num; i ++) {
-            const questionInput = `Question ${i}`;
-            const answerInput = `Answer ${i}`;
-            const question = e.target.querySelector(`input[name="${questionInput}"]`).value;
-            const answer = e.target.querySelector(`input[name="${answerInput}"]`).value;
+            const question = e.target.querySelector(`input[name="Question ${i}"]`).value;
+            const answer = e.target.querySelector(`input[name="Answer ${i}"]`).value;
 
-        questionsObject[question] = answer;
+            questionsObject[question] = answer;
         }
 
         const newObject = {
@@ -59,20 +53,7 @@ export default function CreateNewQuiz({ prop }) {
                         placeholder={`Answer ${index + 1}:`} 
                         required />
                     </div>
-                );
-            })}
-            <div className='createQuizButtons'>
-                <div className='buttonContainer'>
-                    <button type='submit'>Submit</button>
-                </div>
-                <div className="createReturnButton">
-                
-                <form onSubmit={handleReturn}>
-                    <button>Go Back</button>
-                </form>
-                </div>
+                );})}
             </div>
-        </form>
-    </div>
     );
 }

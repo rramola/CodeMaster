@@ -1,62 +1,63 @@
-import Opener from "./components/OpeningPage/Main";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import Opener from "./components/OpeningPage/Opener";
+import QuizID from "./components/JsonHandling/QuizID";
+import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz";
+import JsonHandler from './components/JsonHandling/JsonHandler';
 import DetermineNumberofQuestions from "./components/CreateQuiz/DetermineNumberOfNewQuestions";
+import EditQuiz from "./components/Updater/updateQuiz";
 import CreateNewQuiz from "./components/CreateQuiz/CreateNewQuiz";
-import QuizID from "./components/JsonHandling/getQuizId";
-import JsonHandler from "./components/JsonHandling/json-handler";
-import EditQuiz from "./components/Updater/updateQuiz"
-import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
 import Header from './Styling/Header';
-import Footer from "./Styling/Footer";
-import NavBar from "./Styling/Navbar";
-import {useState} from 'react';
 
-function CodeMaster() {
+export default function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
-  const [showJsonHandler, setShowJson] = useState(false);
-  const [numofQuestions, setnumofQuestions] = useState();
-  const [name, setName] = useState('');
-  const [opener, setOpener] = useState(true);
+  const [displayOpener, setDisplayOpener] = useState(true);
+  const [quizIdVisible, setquizIdVisible] = useState(true);
+  const navigate = useNavigate();
+
+  function handleDisplayOpener() {
+    setDisplayOpener(false);
+  }
 
   function handleButtonClick(id){
     setQuizId(id);
-    setShowJson(true) 
+    setquizIdVisible(!quizIdVisible);
+    navigate('/JsonHandler');
   }
 
-  function setQuestionsNum(num, name){
-    setnumofQuestions(num);
-    setName(name);
+  function handleNavbarClick(){
+    setquizIdVisible(false);
+    navigate('/DetermineNumberOfNewQuestions');
+  }
+
+  function handleGoBack(){
+    setquizIdVisible(true);
+    navigate('/QuizID');
   }
 
   return (
-    <div className="App">
-      <NavBar/>
-      <Header/>
-        <div class="appContainer">
-        <div className="loadingScreen">
-          <Opener />
-        </div>
-        {/* VIEW */}
-        <QuizID handleButtonClick={handleButtonClick} />
-        <h1 className="divider">OR</h1>
-        {/* CREATE */}
-        <DetermineNumberofQuestions prop = {setQuestionsNum}/>
-        <CreateNewQuiz prop ={[numofQuestions, name]}/>
-      {showJsonHandler &&
-        <div className="appContainer">
-          {/* Grab */}
-          <JsonHandler quizId = {quizId} />
-          {/* EDIT */}
-          <EditQuiz quizId={quizId} /> 
+    <div>
+      {displayOpener ? (
+        <Opener displayOpener={handleDisplayOpener} />
+      ) : (
+        <>
+          <Header handleNavbarClick={handleNavbarClick} handleGoBack={handleGoBack}/>
 
-  //         {/* DELETE */}
-  //         <DeleteQuiz quizId={quizId} />
+          {quizIdVisible && (
+            <QuizID handleButtonClick={handleButtonClick} />
+          )}
 
-        </div>
-      }</div>
-      <Footer/>
-  </div>
+          {quizId && (
+            <Routes>
+              <Route path='/DetermineNumberOfNewQuestions' element={<DetermineNumberofQuestions />} />
+              <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
+              <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
+              <Route path='/UpdateQuiz' element={<EditQuiz quizId={quizId}/>} />
+              <Route path='CreateQuiz' element={<CreateNewQuiz prop ={[numofQuestions, language]} />}/>
+            </Routes>
+          )}
+        </>
+      )}
+    </div>
   );
 }
-
-export default CodeMaster;
-

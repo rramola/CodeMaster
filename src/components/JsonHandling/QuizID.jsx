@@ -2,16 +2,8 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 export default function QuizID({handleButtonClick}){
-    const [data, setData] = useState([]);
-    
-    function handleSubmit(e){
-        e.preventDefault();
-        const selectedQuiz = e.target.querySelector('#categorySelector').value;
-        handleButtonClick(selectedQuiz);
-        document.querySelector('.languageSelectorFormContainer').style.display="none";
-        document.querySelector('.newTestFormContainer').style.display="none";
-    }
-    
+  const [data, setData] = useState([]);
+
     const axiosGetAllData = async() => {
         await axios.get('http://localhost:9000/api')
         .then(res => {
@@ -19,10 +11,16 @@ export default function QuizID({handleButtonClick}){
           setData(returnedApiData);
         })
       }
+    
+    function handleSubmit(e){
+        e.preventDefault();
+        const selectedQuiz = e.target.querySelector('#categorySelector').value;
+        handleButtonClick(selectedQuiz);
+    }
 
-      useEffect(() => {
+    useEffect(() => {
         axiosGetAllData();
-      }, []);
+    }, []);
 
     return (
         <div className="languageSelectorFormContainer">
@@ -32,7 +30,7 @@ export default function QuizID({handleButtonClick}){
                     {data.map(item => <option key={item} value={item.id}>{item.language}</option>)}
                 </select>
                     <button type='submit'>Submit</button>
-            </form>               
+            </form>             
         </div>
     )
 }

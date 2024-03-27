@@ -1,9 +1,15 @@
 import React from 'react';
+import NavBar from './Navbar';
+import Footer from './Footer';
 
-export default function Header(){
+export default function Header({handleNavbarClick, handleGoBack}){
     return(
-        <header className="header">
-            <h1>A great educational tool by Ctrl-alt-elite</h1>
-        </header>
-    )
+        <div>
+            <header className="header">
+                <NavBar handleNavbarClick={handleNavbarClick}
+                handleGoBack={handleGoBack}/>
+            </header>
+            <Footer/>
+        </div>
+    );
 }

@@ -28,12 +28,7 @@ export default function DetermineNumberofQuestions({ prop }) {
             setShowExistingQuizDiv(true);
             return;
         }
-
         prop(num, language);
-        document.querySelector('.languageSelectorFormContainer').style.display = "none";
-        document.querySelector('.newTestFormContainer').style.display = "none";
-        document.querySelector('.submitFormContainer').style.display = "grid";
-        document.querySelector('.buttonContainer').style.display = "flex";
     }
 
     function handleDivClick() {

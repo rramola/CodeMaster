@@ -22,6 +22,7 @@ export default function EditQuiz({quizId, showSplash}){
       const newQuestion = e.target.querySelector('#createQuestion').value;
       const newAnswer =  e.target.querySelector('#createAnswer').value;
 
+
       if (!isNaN(newQuestion.trim())){
         e.preventDefault();
         setinvalidInput(true);
@@ -35,6 +36,7 @@ export default function EditQuiz({quizId, showSplash}){
           })
       }
     };
+
 
     useEffect(() => {
       axiosGetOneItem([quizId]);

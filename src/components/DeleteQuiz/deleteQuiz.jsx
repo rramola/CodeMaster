@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export default function DeleteQuiz({quizId}){
+export default function DeleteQuiz({quizId, handleGoBack}){
   const axiosDeleteData = async(id) => {
     await axios.delete(`http://localhost:9000/deleteItem/${id}`);
   }
@@ -11,10 +11,7 @@ export default function DeleteQuiz({quizId}){
   }
 
   function handleReturn(){
-    // window.history.back();
-    return(
-      <></>
-    )
+    handleGoBack();
   }
 
   return(
