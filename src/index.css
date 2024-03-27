@@ -1,5 +1,14 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
-  height: 0%;
+  height: 100%;
   background: linear-gradient( #FFCCEA, #180327, #180327) fixed;
 }
 
@@ -91,12 +100,14 @@ html {
 .deleteQuizContainer button,
 .questionsContainer button,
 .languageSelectorForm button,
-.updateContainer button {
+.updateContainer button{
   background-color: #EC66B2;
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   font-size: 17px;
-  height: 1.7rem;
+  height: 3rem;
   justify-content: center;
   margin: auto;
   width: 7rem;
@@ -113,8 +124,8 @@ html {
 .questionsContainer button:hover,
 .languageSelectorForm button:hover,
 .updateContainer button:hover {
-  background: whitesmoke;
-  box-shadow: 6px 6px #210535;
+  background: rgb(1, 1, 23);
+  box-shadow: 6px 6px #c940a5;
 }
 
 .footer {
@@ -132,8 +143,8 @@ html {
 .languageSelectorForm select,
 .languageSelectorForm option {
   background-color: #FFCCEA;
-  border: solid rgb(41, 5, 46) 2px;
-  border-radius: 10px;
+  border: none;
+  border-radius: 5px;
   box-shadow: 6px 6px #210535;
   cursor: pointer;
   font-size: 18px;
@@ -186,4 +197,65 @@ html {
 .navBar a:hover {
   color: whitesmoke;
   text-decoration: underline whitesmoke;
+}
+
+
+/* background: #f7e7ec8e; */
+
+input {
+  box-shadow: 6px 6px #210535;
+  background-color: #FFCCEA;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 2rem;
+  width: 12em;
+  margin-right: 1em;
+}
+
+input::placeholder {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.openingPage {
+  animation: fade-in 5s;
+  color: #f07bbe;
+  text-shadow: 3px 1px #18022b;
+  align-items: center;
+  animation: fade-in 3s;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 35px;
+  margin-top: 9rem;
+}
+
+.openingPage button {
+  animation: fade-in 5s;
+  width: 15rem;
+  background-color: #EC66B2;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 6px 6px #491171;
+  font-size: 17px;
+  height: 2rem;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.openingPage h1 {
+  padding-bottom: 4rem;
+}
+
+.openingPage button:hover {
+  background: rgb(48, 5, 66);
+  box-shadow: 6px 6px #c940a5;
 }

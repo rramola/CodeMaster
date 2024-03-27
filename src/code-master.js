@@ -13,6 +13,7 @@ export default function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
   const [displayOpener, setDisplayOpener] = useState(true);
   const [quizIdVisible, setquizIdVisible] = useState(true);
+  const [showDetermineNumber, setShowDetermineNumber] = useState(false);
   const navigate = useNavigate();
 
   function handleDisplayOpener() {
@@ -26,6 +27,8 @@ export default function CodeMaster() {
   }
 
   function handleNavbarClick(){
+    // alert('Navbar Clicked')
+    setShowDetermineNumber(true);
     setquizIdVisible(false);
     navigate('/DetermineNumberOfNewQuestions');
   }
@@ -42,19 +45,19 @@ export default function CodeMaster() {
       ) : (
         <>
           <Header handleNavbarClick={handleNavbarClick} handleGoBack={handleGoBack}/>
-
+          <Routes>
+            {showDetermineNumber && <Route path='/DetermineNumberOfNewQuestions' element={<DetermineNumberofQuestions />} />}
+            {quizId && (
+              <>
+                <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
+                <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
+                <Route path='/UpdateQuiz' element={<EditQuiz quizId={quizId}/>} />
+                <Route path='CreateQuiz' element={<CreateNewQuiz />}/>
+              </>
+            )}
+          </Routes>
           {quizIdVisible && (
             <QuizID handleButtonClick={handleButtonClick} />
-          )}
-
-          {quizId && (
-            <Routes>
-              <Route path='/DetermineNumberOfNewQuestions' element={<DetermineNumberofQuestions />} />
-              <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
-              <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
-              <Route path='/UpdateQuiz' element={<EditQuiz quizId={quizId}/>} />
-              <Route path='CreateQuiz' element={<CreateNewQuiz prop ={[numofQuestions, language]} />}/>
-            </Routes>
           )}
         </>
       )}

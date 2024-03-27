@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {useNavigate, useLocation} from 'react-router-dom';
 
 export default function DetermineNumberofQuestions({ prop }) {
     const [data, setData] = useState([]);
     const [showExistingQuizDiv, setShowExistingQuizDiv] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const axiosGetAllData = async () => {
         await axios.get('http://localhost:9000/api')
@@ -22,13 +25,14 @@ export default function DetermineNumberofQuestions({ prop }) {
     function handleSubmit(e) {
         e.preventDefault();
         let num = Number(document.querySelector('#number').value);
-        let language = document.querySelector('#language').value;
+        let language = document.querySelector('#language').value.toUpperCase();
+        language = language.charAt(0).toUpperCase() + language.slice(1);
 
         if (nameList.includes(language.toLowerCase()) || !isNaN(language)) {
             setShowExistingQuizDiv(true);
             return;
         }
-        prop(num, language);
+        navigate('/CreateQuiz', {state:{num, language}})
     }
 
     function handleDivClick() {

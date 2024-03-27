@@ -22,12 +22,14 @@ export default function QuizID({handleButtonClick}){
         axiosGetAllData();
     }, []);
 
+    const sortedData = [...data].sort((a, b) => a.id - b.id);
+
     return (
         <div className="languageSelectorFormContainer">
             <form className="languageSelectorForm" onSubmit = {handleSubmit}>
                 <h1>Select A Language</h1>
                 <select id="categorySelector" className = 'quizDropdown'>
-                    {data.map(item => <option key={item} value={item.id}>{item.language}</option>)}
+                    {sortedData.map(item => <option key={item} value={item.id}>{item.language}</option>)}
                 </select>
                     <button type='submit'>Submit</button>
             </form>             

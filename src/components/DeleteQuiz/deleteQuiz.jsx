@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 export default function DeleteQuiz({quizId, handleGoBack}){
+  console.log(quizId)
   const axiosDeleteData = async(id) => {
     await axios.delete(`http://localhost:9000/deleteItem/${id}`);
   }
