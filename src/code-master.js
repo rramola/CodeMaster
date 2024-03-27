@@ -6,7 +6,9 @@ import JsonHandler from "./components/JsonHandling/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
 import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
 import Header from './Styling/Header';
-import {useEffect, useState} from 'react';
+import Footer from "./Styling/Footer";
+import NavBar from "./Styling/Navbar";
+import {useState} from 'react';
 
 function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
@@ -25,41 +27,35 @@ function CodeMaster() {
     setName(name);
   }
 
-  function setOpenerFalse(){
-    setOpener(false);
-  }
-
-  useEffect(() => {
-    setOpenerFalse();
-  }, []);
-  
-    return(
-      opener ? <QuizID/> : <Opener/>
-    )
-  // return (
-  //   <div className="App">
-  //       <div class="appContainer">
-
-  //       {/* VIEW */}
-  //       <QuizID handleButtonClick={handleButtonClick} />
-
-  //       {/* CREATE */}
-  //       <DetermineNumberofQuestions prop = {setQuestionsNum}/>
-  //       <CreateNewQuiz prop ={[numofQuestions, name]}/>
-  //     {showJsonHandler &&
-  //       <div className="appContainer">
-  //         {/* Grab */}
-  //         <JsonHandler quizId = {quizId} />
-  //         {/* EDIT */}
-  //         <EditQuiz quizId={quizId} /> 
+  return (
+    <div className="App">
+      <NavBar/>
+      <Header/>
+        <div class="appContainer">
+        <div className="loadingScreen">
+          <Opener />
+        </div>
+        {/* VIEW */}
+        <QuizID handleButtonClick={handleButtonClick} />
+        <h1 className="divider">OR</h1>
+        {/* CREATE */}
+        <DetermineNumberofQuestions prop = {setQuestionsNum}/>
+        <CreateNewQuiz prop ={[numofQuestions, name]}/>
+      {showJsonHandler &&
+        <div className="appContainer">
+          {/* Grab */}
+          <JsonHandler quizId = {quizId} />
+          {/* EDIT */}
+          <EditQuiz quizId={quizId} /> 
 
   //         {/* DELETE */}
   //         <DeleteQuiz quizId={quizId} />
 
-  //       </div>
-  //     }</div>
-  // </div>
-  // );
+        </div>
+      }</div>
+      <Footer/>
+  </div>
+  );
 }
 
 export default CodeMaster;
