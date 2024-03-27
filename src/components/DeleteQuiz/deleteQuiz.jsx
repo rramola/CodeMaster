@@ -11,7 +11,10 @@ export default function DeleteQuiz({quizId}){
   }
 
   function handleReturn(){
-    window.history.back();
+    // window.history.back();
+    return(
+      <></>
+    )
   }
 
   return(

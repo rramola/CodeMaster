@@ -6,6 +6,8 @@ import JsonHandler from "./components/JsonHandling/json-handler";
 import EditQuiz from "./components/Updater/updateQuiz"
 import DeleteQuiz from "./components/DeleteQuiz/deleteQuiz"
 import Header from './Styling/Header';
+import Footer from "./Styling/Footer";
+import NavBar from "./Styling/Navbar";
 import {useState} from 'react';
 
 function CodeMaster() {
@@ -26,6 +28,8 @@ function CodeMaster() {
 
   return (
     <div className="App">
+      <NavBar/>
+      <Header/>
         <div class="appContainer">
         <div className="loadingScreen">
           <Opener />
@@ -48,6 +52,7 @@ function CodeMaster() {
 
         </div>
       }</div>
+      <Footer/>
   </div>
   );
 }
