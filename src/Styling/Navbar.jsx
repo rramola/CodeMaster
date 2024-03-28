@@ -15,7 +15,7 @@ export default function NavBar({handleNavbarClick, handleGoBack}) {
   return (
     <nav className="navBar">
       <h1>
-        <span class='typing-text'>When In Doubt: Ctrl-Alt-Elite</span>
+        <span class='typing-text'>If All Else Fails: Ctrl-Alt-Elite</span>
         <span class='cursor'></span>
       </h1>
       <ul>
