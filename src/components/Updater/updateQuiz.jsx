@@ -45,12 +45,12 @@ export default function EditQuiz({quizId, showSplash}){
     useEffect(() => {
       axiosGetOneItem([quizId]);
     }, [quizId]);
-
-
+S
+s
   return (
     <div className="updateContainer">
       <form className="selectorForm" onSubmit={handleSubmiter}>
-          <h1>Question creator</h1>
+          <h1>Question Creator</h1>
           <textarea placeholder='Please type new question here' id="createQuestion" required>
           </textarea>
           <textarea placeholder='Please type answer here' id="createAnswer" required>
