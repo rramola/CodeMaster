@@ -34,6 +34,10 @@ export default function DetermineNumberofQuestions() {
     navigate('/CreateNewQuiz', { state: { num, language } })
   }
 
+  function handleGoBack(){
+    navigate('/QuizID')
+  }
+
   function handleDivClick() {
     setShowExistingQuizDiv(false);
   }
@@ -58,6 +62,7 @@ export default function DetermineNumberofQuestions() {
             required />
 
           <button type='submit'>Submit</button>
+          <button onClick={handleGoBack}>Go Back</button>
         </div>
       </form>
       {showExistingQuizDiv && (

@@ -36,6 +36,10 @@ export default function EditQuiz({quizId, showSplash}){
         navigate('/QuizID')
       };
       }
+    
+    function handleGoBack(){
+      navigate('/QuizID');
+    }
 
 
     useEffect(() => {
@@ -52,6 +56,7 @@ export default function EditQuiz({quizId, showSplash}){
           <textarea placeholder='Please type answer here' id="createAnswer" required>
           </textarea>
           <button>Submit</button>
+          <button onClick={handleGoBack}>Go Back</button>
       </form>               
     </div> 
   )

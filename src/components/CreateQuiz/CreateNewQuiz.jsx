@@ -7,6 +7,10 @@ export default function CreateNewQuiz() {
   const navigate = useNavigate();
   const { num, language } = location.state;
 
+  function handleGoBack(){
+    navigate('/DetermineNumberOfNewQuestions');
+  }
+
   function handleSubmit(e) {
     const questionsObject = {};
     for (let i = 1; i <= num; i ++) {
@@ -50,6 +54,7 @@ export default function CreateNewQuiz() {
         })}
         <div>
           <button type='submit'>Submit</button>
+          <button onClick={handleGoBack}>Go Back</button>
         </div>
       </form>
     </div>

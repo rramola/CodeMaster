@@ -31,6 +31,10 @@ export default function JsonHandler({quizId, handleGoBack}) {
       singleQuiz != {} ? navigate('/TakeQuiz', {state: singleQuiz}): alert("There was a problem!");
     }
 
+    function handleGoBack(){
+      navigate('/QuizID')
+    }
+
     useEffect(() => {
       axiosGetOneItem([quizId]);
     }, [quizId]);
@@ -52,6 +56,7 @@ export default function JsonHandler({quizId, handleGoBack}) {
             <button onClick={handleTakeQuiz} >Take Quiz</button>
             <button onClick={handleUpdateQuiz}>Update Quiz</button>
             <button onClick={handleDeleteQuiz}>Delete Quiz</button>
+            <button onClick={handleGoBack}>Go Back</button>
           </div>
       </div>
     );
