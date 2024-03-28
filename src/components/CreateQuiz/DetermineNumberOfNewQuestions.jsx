@@ -60,9 +60,11 @@ export default function DetermineNumberofQuestions() {
             max="10"
             placeholder='Number of Questions:'
             required />
-
-          <button type='submit'>Submit</button>
-          <button onClick={handleGoBack}>Go Back</button>
+            <div className='determineQuestionsButtonContainer'>
+            <   button type='submit'>Submit</button>
+                <button onClick={handleGoBack}>Go Back</button>
+            </div>
+         
         </div>
       </form>
       {showExistingQuizDiv && (
