@@ -13,7 +13,7 @@ const TakeQuiz = ({ handleGoBack }) => {
     if (quizData.state.questions) {
       const allQuestions = Object.entries(quizData.state.questions);
       const selectedQuestions = [];
-      while (selectedQuestions.length < 7) {
+      while (selectedQuestions.length < 5) {
         const randomIndex = Math.floor(Math.random() * allQuestions.length);
         selectedQuestions.push(allQuestions[randomIndex]);
         allQuestions.splice(randomIndex, 1);

@@ -5,12 +5,10 @@
   "questions": {
    "How do you create an unordered list in HTML?": "<ul>",
    "What CSS property is used to change the text color?": "color",
-   "How do you add a border to an element in CSS?": "border",
    "What HTML tag is used to define a paragraph?": "<p>",
    "How do you italicize text in HTML?": "<i>",
    "How do you create an ordered list in HTML?": "<ol>",
    "What CSS property is used to change the background color?": "background-color",
-   "How do you set the font size in CSS?": "font-size",
    "What HTML tag is used to create a hyperlink?": "<a>",
    "How do you align text to the center in CSS?": "text-align: center;",
    "What HTML tag is used to insert an image?": "<img>",
@@ -24,8 +22,6 @@
    "Which event occurs when a user clicks on an HTML element?": "onClick",
    "How do you call a function named 'myFunction' in JavaScript?": "myFunction()",
    "How do you write a message in an alert box?": "alert()",
-   "How do you declare a constant variable in JavaScript?": "const",
-   "How do you comment a single line in JavaScript?": "//",
    "Which operator is used for concatenation in JavaScript?": "+",
    "What is the result of 10 + '5' in JavaScript?": "105",
    "How do you check the length of a list in JavaScript?": ".length",
@@ -48,10 +44,7 @@
    "How do you append an element to a list in Python?": ".append()",
    "How do you iterate over items in a list(called list) in Python?": "for item in list:",
    "How do you remove an element from a list in Python?": ".remove()",
-   "How do you join elements of a list into a string in Python?": ".join()",
-   "How do you find the maximum value in a list in Python?": "max()",
-   "How do you find the minimum value in a list in Python?": "min()",
-   "eh": "eh"
+   "How do you join elements of a list into a string in Python?": ".join()"
   }
  }
 ]

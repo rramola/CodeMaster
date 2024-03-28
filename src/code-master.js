@@ -45,7 +45,7 @@ export default function CodeMaster() {
   }
 
   return (
-    <div>
+    <div className = '.body'>
       {displayOpener ? (
         <Opener displayOpener={handleDisplayOpener} />
       ) : (
