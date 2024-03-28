@@ -45,8 +45,8 @@ export default function EditQuiz({quizId, showSplash}){
     useEffect(() => {
       axiosGetOneItem([quizId]);
     }, [quizId]);
-S
-s
+// S
+// s
   return (
     <div className="updateContainer">
       <form className="selectorForm" onSubmit={handleSubmiter}>
