@@ -334,3 +334,31 @@ body.openingPage::before {
   grid-template-columns: 1fr 1fr;
   column-gap: 3rem;
 }
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.08em solid #EC66B2;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.15em;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15ch;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #EC66B2;
+  }
+}
