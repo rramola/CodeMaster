@@ -55,8 +55,10 @@ export default function EditQuiz({quizId, showSplash}){
           </textarea>
           <textarea placeholder='Please type answer here' id="createAnswer" required>
           </textarea>
-          <button>Submit</button>
-          <button onClick={handleGoBack}>Go Back</button>
+          <div className='createQuestionButtonContainer'>
+            <button>Submit</button>
+            <button onClick={handleGoBack}>Go Back</button>
+          </div>
       </form>               
     </div> 
   )

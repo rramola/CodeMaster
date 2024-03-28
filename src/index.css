@@ -283,6 +283,13 @@ body.openingPage::before {
   font-size: 1.5rem;
   line-height: 3rem;
 }
+.createQuestionButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
 .questionsContainer {
   /* width: fit-content; */
   height: auto;
@@ -290,6 +297,7 @@ body.openingPage::before {
   padding-right: 3rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .updateContainer {
@@ -303,8 +311,10 @@ body.openingPage::before {
 
 .questionSubmitButton {
   display: grid;
-  grid-template-columns: 1fr 1fr;  
-  column-gap: 5rem;
+  grid-template-columns: 1fr 1fr; 
+  margin-top: 1rem; 
+  column-gap:12rem;
+  row-gap: 2rem;
 }
 
 .selectorForm {
@@ -313,7 +323,7 @@ body.openingPage::before {
 }
 
 .selectorForm h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .selectorForm input {
   margin: 0;
@@ -333,6 +343,45 @@ body.openingPage::before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3rem;
+}
+
+.languageSelectorForm  {
+  display: flex;
+  height: fit-content;
+
+
+}
+
+.languageSelectorForm h1 {
+  margin-top: 3rem;
+}
+
+.languageSelectorForm select {
+  margin-top: 3rem;
+}
+
+.languageSelectorForm button {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.newTestFormContainer  {
+  height: fit-content;
+}
+
+.newTestFormContainer h1 {
+  margin-top: 3rem;
+
+}
+
+.newTestFormContainer form {
+  margin-top: 3rem;
+  margin-bottom:3rem;
+}
+.determineQuestionsButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
 }
 
 .typing-text {

@@ -60,7 +60,7 @@ export default function CreateNewQuiz() {
             </div>
           );
         })}
-        <div>
+        <div className='createButtonContainer'>
           <button type='submit'>Submit</button>
           <button onClick={handleGoBack}>Go Back</button>
         </div>
