@@ -26,7 +26,6 @@ export default function CodeMaster() {
 
   function handleButtonClick(id){
     setQuizId(id);
-    setquizIdVisible(!quizIdVisible);
     navigate('/JsonHandler');
   }
 
@@ -50,17 +49,13 @@ export default function CodeMaster() {
           <Header handleNavbarClick={handleNavbarClick} handleGoBack={handleGoBack}/>
           <Routes>
             {showDetermineNumber && <Route path='/DetermineNumberOfNewQuestions' element={<DetermineNumberofQuestions />} />}
-            {quizId && (
-              <>
-                <Route path='/TakeQuiz' element={<TakeQuiz handleGoBack={handleGoBack}/>} />
-                <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
-                <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
-                <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
-                <Route path='/UpdateQuiz' element={<EditQuiz quizId={quizId}/>} />
-                <Route path='/CreateNewQuiz' element={<CreateNewQuiz/>}/>
-              </>
-            )}
-            {quizIdVisible && (
+              <Route path='/TakeQuiz' element={<TakeQuiz handleGoBack={handleGoBack}/>} />
+              <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
+              <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
+              <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
+              <Route path='/UpdateQuiz' element={<EditQuiz quizId={quizId}/>} />
+              <Route path='/CreateNewQuiz' element={<CreateNewQuiz/>}/>
+            {!displayOpener && quizIdVisible && (
               <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
             )}
           </Routes>
