@@ -12,16 +12,14 @@ html {
   background: linear-gradient(#FFCCEA, #180327, #180327) fixed;
 }
 
-
 * {
   margin: auto;
   padding: 0;
 }
 
-
 .header {
   margin-top: 0;
-  margin-bottom: 4rem;
+  margin-bottom: 5px;
   height: 4rem;
   font-weight: 300;
   font-size: 14px;
@@ -29,7 +27,6 @@ html {
   background: #180327;
   color: #FFCCEA;
 }
-
 
 .navBar h1 {
   text-align: center;
@@ -66,7 +63,8 @@ html {
 .deleteQuizContainer,
 .questionsContainer,
 .languageSelectorForm,
-.updateContainer {
+.updateContainer,
+.takeTheQuiz {
   background: #bc7fcd;
   border: solid #7B337D 2px;
   border-radius: 10px;
@@ -76,9 +74,8 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  margin-top: 5vh;
-  height: 60vh;
+  margin-top: 3vh;
+  height: fit-content;
   width: fit-content;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -104,7 +101,8 @@ html {
 .deleteQuizContainer button,
 .questionsContainer button,
 .languageSelectorForm button,
-.updateContainer button{
+.updateContainer button,
+.takeTheQuiz button {
   background-color: #EC66B2;
   padding: 0.5rem 1rem;
   color: #fff;
@@ -132,23 +130,11 @@ html {
   box-shadow: 6px 6px #c940a5;
 }
 
-.footer {
-  height: max-content;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  position: fixed;
-  bottom: 0%;
-  width: 100%;
-  background: #FFCCEA;
-  border: solid rgb(41, 5, 46) 2px;
-}
-
 .languageSelectorForm {
-  /* width: fit-content; */
   padding-left: 3rem;
   padding-right: 3rem;
 }
+
 .languageSelectorForm select,
 .languageSelectorForm option {
   background-color: #FFCCEA;
@@ -178,14 +164,14 @@ html {
 .navBar h1 {
   margin: 0;
   font-size: 1.5rem;
-  text-align: left; /* Align header to the left */
+  text-align: left;
 }
 
 .navBar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: right; /* Align links to the right */
+  text-align: right;
 }
 
 .navBar li {
@@ -200,16 +186,13 @@ html {
 .navBar a {
   color: #EC66B2;
   text-decoration: none;
-  font-size: 1.2rem; /* Increase font size of links */
+  font-size: 1.2rem;
 }
 
 .navBar a:hover {
   color: whitesmoke;
   text-decoration: underline whitesmoke;
 }
-
-
-/* background: #f7e7ec8e; */
 
 input {
   box-shadow: 6px 6px #210535;
@@ -243,13 +226,13 @@ input::placeholder {
 }
 
 body.openingPage::before {
-  content: ""; /* Add an empty content */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: none; /* Set the background image to none */
+  background-image: none;
 }
 
 .openingPage button {
@@ -279,19 +262,21 @@ body.openingPage::before {
   box-shadow: 6px 6px #c940a5;
 }
 
-.centeringQuestions p {
-  font-size: 1.5rem;
-  line-height: 3rem;
+.centeringQuestions p{
+  font-size: 1.4rem;
+  line-height: 1.7rem;
 }
+
+.createButtonContainer,
 .createQuestionButtonContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
+  grid-gap: 4rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
 .questionsContainer {
-  /* width: fit-content; */
   height: auto;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -311,9 +296,9 @@ body.openingPage::before {
 
 .questionSubmitButton {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
-  margin-top: 1rem; 
-  column-gap:12rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+  column-gap: 12rem;
   row-gap: 2rem;
 }
 
@@ -325,6 +310,7 @@ body.openingPage::before {
 .selectorForm h1 {
   margin-bottom: 2rem;
 }
+
 .selectorForm input {
   margin: 0;
 }
@@ -345,15 +331,14 @@ body.openingPage::before {
   column-gap: 3rem;
 }
 
-.languageSelectorForm  {
+.languageSelectorForm {
   display: flex;
   height: fit-content;
-
-
 }
 
 .languageSelectorForm h1 {
   margin-top: 3rem;
+  text-align: center; /* Center the h1 element */
 }
 
 .languageSelectorForm select {
@@ -365,19 +350,19 @@ body.openingPage::before {
   margin-bottom: 3rem;
 }
 
-.newTestFormContainer  {
+.newTestFormContainer {
   height: fit-content;
 }
 
 .newTestFormContainer h1 {
   margin-top: 3rem;
-
 }
 
 .newTestFormContainer form {
   margin-top: 3rem;
-  margin-bottom:3rem;
+  margin-bottom: 3rem;
 }
+
 .determineQuestionsButtonContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -391,7 +376,7 @@ body.openingPage::before {
   white-space: nowrap;
   margin: 0;
   letter-spacing: 0.15em;
-  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end 7 forwards;
 }
 
 @keyframes typing {
@@ -404,10 +389,110 @@ body.openingPage::before {
 }
 
 @keyframes blink-caret {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
     border-color: #EC66B2;
   }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.questionsContainer {
+  margin-bottom: 5rem;
+}
+
+.takeTheQuiz {
+  height: fit-content;
+}
+
+.takeTheQuiz li {
+  list-style-type: none;
+}
+
+.footer {
+  height: 1cqb;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: #FFCCEA;
+  color: #EC66B2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: solid #FFCCEA 2px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  justify-content: center;
+  color: #180327;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.deleteQuizContainer {
+  height: 40vh;
+}
+
+.updateContainer textarea {
+  box-shadow: 6px 6px #210535;
+  background-color: #FFCCEA;
+  border: solid rgb(41, 5, 46) 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 2rem;
+  width: 12em;
+  margin-right: 1em;
+  margin: auto;
+}
+
+
+.updateContainer textarea::placeholder {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.updateContainer textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.takeTheQuiz input,
+.takeTheQuiz textarea {
+  display: block;
+  margin: auto;
+}
+
+.takeTheQuiz ul {
+  padding: 0;
+  margin: 0;
+}
+
+.takeTheQuiz li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.takeTheQuiz li input {
+  margin-top: 0.2rem;
+  margin-bottom: .2rem;
 }

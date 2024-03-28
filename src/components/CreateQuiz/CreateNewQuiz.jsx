@@ -22,14 +22,7 @@ export default function CreateNewQuiz() {
       language: language,
       questions: questionsObject
     };
-    // question input validation. it will validate correctly but once you close the alert it goes to home screen. then throws react router dom error.
-    // seems like it is keeping the path of the question creator and it's causing routing issues.
-    for (const [question, answer] of Object.entries(newObject.questions)) {
-      if (!isNaN(question)) {
-        alert('Question can not be a number')
-        return
-      }
-    };
+
     const axiosPostData = (newObject) => {
       axios.post(`http://localhost:9000/addItem`, newObject)
       .then(response => {

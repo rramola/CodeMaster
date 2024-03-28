@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-export default function DeleteQuiz({quizId, handleGoBack}){
+export default function DeleteQuiz({quizId}){
   console.log(quizId)
   const navigate = useNavigate();
   const axiosDeleteData = async(id) => {
@@ -11,11 +11,11 @@ export default function DeleteQuiz({quizId, handleGoBack}){
 
   function handleSubmitter() {
     axiosDeleteData([quizId]);
-    navigate('/QuizID');
+    navigate('/JsonHandler');
   }
 
   function handleReturn(){
-    handleGoBack();
+    navigate('/JsonHandler');
   }
 
   return(

@@ -47,7 +47,7 @@ const TakeQuiz = ({ handleGoBack }) => {
   };
 
   return (
-    <div>
+    <div className ='takeTheQuiz'>
       {!wasSubmitted ? (
         <form onSubmit={handleSubmit}>
           <ul>

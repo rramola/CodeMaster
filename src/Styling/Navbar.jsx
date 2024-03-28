@@ -11,9 +11,13 @@ export default function NavBar({handleNavbarClick, handleGoBack}) {
     handleNavbarClick();
   }
 
+
   return (
     <nav className="navBar">
-      <h1>A great educational tool by Ctrl-alt-elite</h1>
+      <h1>
+        <span class='typing-text'>When In Doubt: Ctrl-Alt-Elite</span>
+        <span class='cursor'></span>
+      </h1>
       <ul>
         <li><Link to='/QuizID' onClick={handleHomeClick}>Home</Link></li>
         <li><Link to='/DetermineNumberOfNewQuestions' onClick={handleNewQuizClick}>Make A New Quiz</Link></li>

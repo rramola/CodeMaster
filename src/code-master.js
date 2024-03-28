@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Opener from "./components/OpeningPage/Opener";
 import QuizID from "./components/JsonHandling/QuizID";
@@ -19,6 +19,10 @@ export default function CodeMaster() {
   const [quizIdVisible, setquizIdVisible] = useState(true);
   const [showDetermineNumber, setShowDetermineNumber] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/QuizID');
+  }, []);
 
   function handleDisplayOpener() {
     setDisplayOpener(false);
@@ -52,13 +56,14 @@ export default function CodeMaster() {
               <Route path='/TakeQuiz' element={<TakeQuiz handleGoBack={handleGoBack}/>} />
               <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
               <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
-              <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
+              <Route path='/DeleteQuiz' element={<DeleteQuiz quizId={quizId}/>} />
               <Route path='/UpdateQuiz' element={<EditQuiz quizId={quizId}/>} />
               <Route path='/CreateNewQuiz' element={<CreateNewQuiz/>}/>
             {!displayOpener && quizIdVisible && (
               <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
             )}
           </Routes>
+          <Footer/>
         </>
       )}
     </div>
