@@ -65,7 +65,7 @@ const TakeQuiz = ({ handleGoBack }) => {
           <h1>Final Grade: {finalGrade}%</h1>
         </div>
       )}
-      <button onClick={handleGoBack}>Go Back</button>
+      <button onClick={handleGoBack}>Go Home</button>
     </div>
   );
 };
