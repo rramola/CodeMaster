@@ -14,7 +14,7 @@ export default function EditQuiz({ quizId }) {
     axiosGetOneItem(quizId);
   }, [quizId]);
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     const newQuestion = e.target.querySelector('#createQuestion').value;
     const newAnswer = e.target.querySelector('#createAnswer').value;
@@ -45,12 +45,4 @@ export default function EditQuiz({ quizId }) {
       </form>               
     </div> 
   )
-      <form className="selectorForm" onSubmit={handleSubmit}>
-        <h1>Question Creator</h1>
-        <input placeholder='Please type new question here' id="createQuestion" required />
-        <input placeholder='Please type answer here' id="createAnswer" required />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
 }
