@@ -1,14 +1,17 @@
 import React from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function DeleteQuiz({quizId, handleGoBack}){
   console.log(quizId)
+  const navigate = useNavigate();
   const axiosDeleteData = async(id) => {
     await axios.delete(`http://localhost:9000/deleteItem/${id}`);
   }
 
   function handleSubmitter() {
-    axiosDeleteData([quizId])
+    axiosDeleteData([quizId]);
+    navigate('/QuizID');
   }
 
   function handleReturn(){
@@ -25,4 +28,3 @@ export default function DeleteQuiz({quizId, handleGoBack}){
     </div>
   )
 }
-

@@ -30,7 +30,6 @@ export default function CodeMaster() {
   }
 
   function handleNavbarClick(){
-    // alert('Navbar Clicked')
     setShowDetermineNumber(true);
     setquizIdVisible(false);
     navigate('/DetermineNumberOfNewQuestions');
@@ -52,20 +51,17 @@ export default function CodeMaster() {
             {showDetermineNumber && <Route path='/DetermineNumberOfNewQuestions' element={<DetermineNumberofQuestions />} />}
             {quizId && (
               <>
+                <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
                 <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
                 <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
                 <Route path='/UpdateQuiz' element={<EditQuiz quizId={quizId}/>} />
-                <Route path='CreateQuiz' element={<CreateNewQuiz />}/>
+                <Route path='/CreateNewQuiz' element={<CreateNewQuiz/>}/>
               </>
             )}
+            {quizIdVisible && (
+              <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
+            )}
           </Routes>
-          {quizIdVisible && (
-            <QuizID handleButtonClick={handleButtonClick} />
-          )}
-          <div className="footer">
-            <Footer />
-          
-          </div>
         </>
       )}
     </div>
