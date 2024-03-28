@@ -27,6 +27,10 @@ export default function JsonHandler({quizId, handleGoBack}) {
       navigate('/UpdateQuiz')
     }
 
+    function handleTakeQuiz() {
+      singleQuiz != {} ? navigate('/TakeQuiz', {state: singleQuiz}): alert("There was a problem!");
+    }
+
     useEffect(() => {
       axiosGetOneItem([quizId]);
     }, [quizId]);
@@ -44,9 +48,9 @@ export default function JsonHandler({quizId, handleGoBack}) {
           <div className = 'centeringQuestions'>
             {questions.map((each, index) => <p>{index + 1}. {each}</p>)}
           </div>
+          <button onClick={handleTakeQuiz} >Take Quiz</button>
           <button onClick={handleUpdateQuiz}>Update Quiz</button>
           <button onClick={handleDeleteQuiz}>Delete Quiz</button>
       </div>
-    )
-
-}
+    );
+};

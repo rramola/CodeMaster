@@ -7,6 +7,7 @@ import JsonHandler from './components/JsonHandling/JsonHandler';
 import DetermineNumberofQuestions from "./components/CreateQuiz/DetermineNumberOfNewQuestions";
 import EditQuiz from "./components/Updater/updateQuiz";
 import CreateNewQuiz from "./components/CreateQuiz/CreateNewQuiz";
+import TakeQuiz from "./components/TakeQuiz/TakeQuiz";
 import Header from './Styling/Header';
 
 export default function CodeMaster() {
@@ -48,6 +49,7 @@ export default function CodeMaster() {
             {showDetermineNumber && <Route path='/DetermineNumberOfNewQuestions' element={<DetermineNumberofQuestions />} />}
             {quizId && (
               <>
+                <Route path='/TakeQuiz' element={<TakeQuiz handleGoBack={handleGoBack}/>} />
                 <Route path='/QuizID' element={<QuizID handleButtonClick={handleButtonClick}/>} />
                 <Route path='/JsonHandler' element={<JsonHandler quizId={quizId} handleGoBack={handleGoBack} />} />
                 <Route path='/DeleteQuiz' element={<DeleteQuiz handleGoBack={handleGoBack} quizId={quizId}/>} />
