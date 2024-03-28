@@ -47,10 +47,12 @@ export default function EditQuiz({quizId, showSplash}){
     <div className="updateContainer">
       <form className="selectorForm" onSubmit={handleSubmiter}>
           <h1>Question Creator</h1>
-          <input placeholder='Please type new question here' id="createQuestion" required>
-          </input>
-          <input placeholder='Please type answer here' id="createAnswer" required>
-          </input>
+          <div className='updateFormInputContainer'>
+            <input placeholder='Please type new question here' id="createQuestion" required>
+            </input>
+            <input placeholder='Please type answer here' id="createAnswer" required>
+            </input>
+          </div>
           <button>Submit</button>
       </form>               
     </div> 

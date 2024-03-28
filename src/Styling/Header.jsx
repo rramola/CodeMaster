@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from './Navbar';
-import Footer from './Footer';
 
 export default function Header({handleNavbarClick, handleGoBack}){
     return(
@@ -9,7 +8,6 @@ export default function Header({handleNavbarClick, handleGoBack}){
                 <NavBar handleNavbarClick={handleNavbarClick}
                 handleGoBack={handleGoBack}/>
             </header>
-            <Footer/>
         </div>
     );
 }

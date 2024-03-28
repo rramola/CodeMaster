@@ -17,6 +17,7 @@ html {
   padding: 0;
 }
 
+
 .header {
   margin-top: 0;
   margin-bottom: 4rem;
@@ -25,9 +26,9 @@ html {
   font-size: 14px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   background: #180327;
-  box-shadow: 6px 6px #240328;
   color: #FFCCEA;
 }
+
 
 .navBar h1 {
   text-align: center;
@@ -77,7 +78,9 @@ html {
   margin: auto;
   margin-top: 5vh;
   height: 60vh;
-  width: 70vw;
+  width: fit-content;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .submitFormContainer h1,
@@ -129,7 +132,7 @@ html {
 }
 
 .footer {
-  height: 1.5rem;
+  height: max-content;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -140,6 +143,11 @@ html {
   border: solid rgb(41, 5, 46) 2px;
 }
 
+.languageSelectorForm {
+  /* width: fit-content; */
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
 .languageSelectorForm select,
 .languageSelectorForm option {
   background-color: #FFCCEA;
@@ -258,4 +266,60 @@ input::placeholder {
 .openingPage button:hover {
   background: rgb(48, 5, 66);
   box-shadow: 6px 6px #c940a5;
+}
+
+.centeringQuestions p {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+.questionsContainer {
+  /* width: fit-content; */
+  height: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.updateContainer {
+  display: flex;
+  height: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.questionSubmitButton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  column-gap: 5rem;
+}
+
+.selectorForm {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.selectorForm h1 {
+  margin-bottom: 3rem;
+}
+.selectorForm input {
+  margin: 0;
+}
+
+.updateFormInputContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+}
+
+.updateFormInputContainer button {
+  margin-top: 3rem;
+}
+
+.deleteQuizContainer form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
 }

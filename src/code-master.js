@@ -8,6 +8,9 @@ import DetermineNumberofQuestions from "./components/CreateQuiz/DetermineNumberO
 import EditQuiz from "./components/Updater/updateQuiz";
 import CreateNewQuiz from "./components/CreateQuiz/CreateNewQuiz";
 import Header from './Styling/Header';
+import Footer from "./Styling/Footer";
+
+
 
 export default function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
@@ -59,6 +62,10 @@ export default function CodeMaster() {
           {quizIdVisible && (
             <QuizID handleButtonClick={handleButtonClick} />
           )}
+          <div className="footer">
+            <Footer />
+          
+          </div>
         </>
       )}
     </div>
