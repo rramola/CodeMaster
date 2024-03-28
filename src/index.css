@@ -215,7 +215,7 @@ input::placeholder {
 .openingPage {
   animation: fade-in 5s;
   color: #f07bbe;
-  text-shadow: 3px 1px #18022b;
+  text-shadow: 3px 3px #18022b;
   align-items: center;
   animation: fade-in 3s;
   display: flex;
@@ -407,11 +407,17 @@ body.openingPage::before {
 
 .takeTheQuiz {
   height: fit-content;
+  padding: 2rem;
 }
 
 .takeTheQuiz li {
   list-style-type: none;
 }
+
+.takeTheQuiz button {
+  margin-top: 1rem;
+}
+
 
 .footer {
   height: 1cqb;
@@ -489,10 +495,27 @@ body.openingPage::before {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  background-color: #491171;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 6px 6px #210535;
 }
 
 
 .takeTheQuiz li input {
-  margin-top: 0.2rem;
-  margin-bottom: .2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.takeTheQuiz li p {
+  font-size: 1.3rem;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+}
+
+.grade{
+  padding: 2rem;
+  font-size: 1.7rem;
 }

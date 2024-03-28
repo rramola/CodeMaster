@@ -58,10 +58,10 @@ const TakeQuiz = ({ handleGoBack }) => {
               </li>
             ))}
           </ul>
-          <input type="submit" value="Submit" />
+          <input className="submitButton" type="submit" value="Submit" />
         </form>
       ) : (
-        <div>
+        <div className='grade'>
           <h1>Final Grade: {finalGrade}%</h1>
         </div>
       )}
