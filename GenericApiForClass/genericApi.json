@@ -7,7 +7,23 @@
                 "How do you create a list in Python?": "[]",
                 "How do you comment a single line in Python?": "#",
                 "How do you convert an integer to a string in Python?": "str()",
-                "How do you create a multi-line string in Python?":  "triple-quotes"
+                "How do you convert a variable to an integer in Python?":  "int()",
+                "How do you check the length of a list in Python?": "len()",
+                "How do you append an element to a list in Python?": ".append()",
+                "How do you iterate over items in a list(called list) in Python?": "for item in list:",
+                "How do you remove an element from a list in Python?": ".remove()",
+                "How do you join elements of a list into a string in Python?": ".join()",
+                "How do you find the maximum value in a list in Python?": "max()",
+                "How do you find the minimum value in a list in Python?": "min()",
+                "How do you sort a list in Python?": ".sort()",
+                "How do you access the last element of a list(called list) in Python?": "list[-1]",
+                "How do you create a tuple in Python?": "()",
+                "Given two lists(list1, list2), How do you combine them to create a list of tuples?": "zip(list1,list2)",
+                "How do you create a set in Python?": "set()",
+                "How do you add an element to a set in Python?": ".add()",
+                "How do you remove an element from a set in Python?": ".remove()",
+                "How do you perform a union operation on sets in Python?": ".union()",
+                "How do you perform an intersection operation on sets in Python?": ".intersection()"
             }
         },
         {
@@ -18,18 +34,52 @@
                 "What CSS property is used to change the text color?": "color",
                 "How do you add a border to an element in CSS?": "border",
                 "What HTML tag is used to define a paragraph?": "<p>",
-                "How do you italicize text in HTML?": "<i>"
+                "How do you italicize text in HTML?": "<i>",
+                "How do you create an ordered list in HTML?": "<ol>",
+                "What CSS property is used to change the background color?": "background-color",
+                "How do you set the font size in CSS?": "font-size",
+                "What HTML tag is used to create a hyperlink?": "<a>",
+                "How do you align text to the center in CSS?": "text-align: center;",
+                "What HTML tag is used to insert an image?": "<img>",
+                "What CSS Property is used to adjust the margin between elements": "margin",
+                "How do you make text bold in HTML?": "<b>",
+                "What CSS property is used to adjust the padding between elements?": "padding",
+                "How do you create a button in HTML?": "<button>",
+                "What CSS property is used to set the width of an element?": "width",
+                "How do you create a form in HTML?": "<form>",
+                "What CSS property is used to control the visibility of an element?": "display",
+                "How do you create an H1 heading in HTML?": "<h1>",
+                "How do you create a horizontal rule in HTML?": "<hr>",
+                "What CSS property is used to add shadows to text?": "text-shadow",
+                "How do you create a table in HTML?": "<table>"
             }
         },
         {
             "id": 3,
-            "language": "javascript",
+            "language": "JavaScript",
             "questions": {
                 "Which event occurs when a user clicks on an HTML element?": "onClick",
                 "How do you call a function named 'myFunction' in JavaScript?": "myFunction()",
                 "Is JavaScript case-sensitive?": "Yes",
                 "How do you write a message in an alert box?": "alert()",
-                "Which operator is used to assign a value to a variable in JavaScript?": "="
+                "Which operator is used to assign a value to a variable in JavaScript?": "=",
+                "Which event occurs when a user submits a form in HTML?": "onSubmit",
+                "How do you declare a constant variable in JavaScript?": "const",
+                "Is JavaScript a dynamically typed language?": "Yes",
+                "How do you comment a single line in JavaScript?": "//",
+                "Which operator is used for concatenation in JavaScript?": "+",
+                "What is the result of 10 + '5' in JavaScript?": "105",
+                "How do you check the length of a list in JavaScript?": ".length",
+                "How do you access the first element of an array in JavaScript?": "array[0]",
+                "How do you define a function in JavaScript?": "function",
+                "How do you check the data type of a variable in JavaScript?": "typeof",
+                "Which operator is used to check strict equality in JavaScript?": "===",
+                "Which function is used to log data in the console in JavaScript?": "<console.log()",
+                "Which function is used to round a number to the nearest integer in JavaScript?": "Math.round()",
+                "What method is used to remove the last element from an array in JavaScript?": "pop()",
+                "What function is used to find the length of a string in JavaScript?": "length()",
+                "How do you convert a string to uppercase in JavaScript?": "toUpperCase()",
+                "What does NaN stand for in JavaScript?": "Not a Number"
             }
         }
 ]
