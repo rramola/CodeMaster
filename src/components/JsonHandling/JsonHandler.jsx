@@ -50,7 +50,7 @@ export default function JsonHandler({quizId, handleGoBack}) {
           </div>
           <div className="questionSubmitButton">
             <button onClick={handleTakeQuiz} >Take Quiz</button>
-          <button onClick={handleUpdateQuiz}>Update Quiz</button>
+            <button onClick={handleUpdateQuiz}>Update Quiz</button>
             <button onClick={handleDeleteQuiz}>Delete Quiz</button>
           </div>
       </div>
