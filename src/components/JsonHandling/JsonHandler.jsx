@@ -48,9 +48,11 @@ export default function JsonHandler({quizId, handleGoBack}) {
           <div className = 'centeringQuestions'>
             {questions.map((each, index) => <p>{index + 1}. {each}</p>)}
           </div>
-          <button onClick={handleTakeQuiz} >Take Quiz</button>
+          <div className="questionSubmitButton">
+            <button onClick={handleTakeQuiz} >Take Quiz</button>
           <button onClick={handleUpdateQuiz}>Update Quiz</button>
-          <button onClick={handleDeleteQuiz}>Delete Quiz</button>
+            <button onClick={handleDeleteQuiz}>Delete Quiz</button>
+          </div>
       </div>
     );
 };

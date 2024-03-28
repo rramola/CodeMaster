@@ -33,6 +33,18 @@ export default function EditQuiz({ quizId }) {
 
   return (
     <div className="updateContainer">
+      <form className="selectorForm" onSubmit={handleSubmiter}>
+          <h1>Question Creator</h1>
+          <div className='updateFormInputContainer'>
+            <input placeholder='Please type new question here' id="createQuestion" required>
+            </input>
+            <input placeholder='Please type answer here' id="createAnswer" required>
+            </input>
+          </div>
+          <button>Submit</button>
+      </form>               
+    </div> 
+  )
       <form className="selectorForm" onSubmit={handleSubmit}>
         <h1>Question Creator</h1>
         <input placeholder='Please type new question here' id="createQuestion" required />

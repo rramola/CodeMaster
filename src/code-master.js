@@ -9,6 +9,9 @@ import EditQuiz from "./components/Updater/updateQuiz";
 import CreateNewQuiz from "./components/CreateQuiz/CreateNewQuiz";
 import TakeQuiz from "./components/TakeQuiz/TakeQuiz";
 import Header from './Styling/Header';
+import Footer from "./Styling/Footer";
+
+
 
 export default function CodeMaster() {
   const [quizId, setQuizId] = useState(null);
